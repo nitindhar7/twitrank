@@ -1,0 +1,4 @@
+.loadpath
+.project
+config/database.yml
+log/*.log
