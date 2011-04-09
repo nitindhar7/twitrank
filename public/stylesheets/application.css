@@ -1,0 +1,41 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 11px;
+	font-family: "Trebuchet MS" Helvetica Tahoma;
+	outline: none;
+}
+
+#queries {
+	width: 1000px;
+}
+
+#queries h1 {
+	width: 1000px;
+	height: 40px;
+	line-height: 40px;
+}
+
+#queries table {
+	position: relative;
+	width: 500px;
+	float: left;
+}
+
+#queries table tbody tr,
+#queries table thead tr {
+	width: 500px;
+	height: 25px;
+	line-height: 25px;
+}
+
+#query_tweets {
+	width: 500px;
+	float: left;
+}
+
+#query_tweets h2 {
+	width: 500px;
+	height: 25px;
+	line-height: 25px;
+}

@@ -1,0 +1,32 @@
+<%= link_to "Queries", queries_path %>
+
+<h1>Tweets</h1>
+
+<table>
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Query</th>
+			<th>Text</th>
+			<th>User</th>
+			<th>Retweets</th>
+			<th>Created At</th>
+			<th>Location</th>
+			<th>Signals</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% for @tweet in @tweets %>
+			<tr>
+				<td><%= @tweet.id %></td>
+				<td><%= @tweet.query.text %></td>
+				<td><%= @tweet.text %></td>
+				<td><%= @tweet.user %></td>
+				<td><%= @tweet.retweets || 0 %></td>
+				<td><%= @tweet.tweet_created_at %></td>
+				<td><%= @tweet.location %></td>
+				<td><%= link_to "Signals", signals_tweet_url( :id => @tweet.id ), :method => :put %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

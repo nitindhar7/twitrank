@@ -1,0 +1,36 @@
+<%= link_to "Tweets", tweets_path %>
+
+<div id="queries">
+	<h1>Queries</h1>
+	
+	<table cellpadding="0" cellspacing="0">
+		<thead>
+			<tr>
+				<th></th>
+				<th>Id</th>
+				<th>Text</th>
+				<th>Date</th>
+				<th>Location</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% for @query in @queries %>
+				<tr>
+					<td>
+						<% form_remote_tag :url => { :action => "query_tweets", :id => @query } do %>
+							<%= submit_tag "View Tweets" %>
+						<% end %>
+					</td>
+					<td><%= @query.id %></td>
+					<td><%= @query.text %></td>
+					<td><%= @query.query_date.strftime("%Y-%m-%d") %></td>
+					<td><%= @query.location %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+	
+	<div id="query_tweets">
+		<%= render( :partial => "query_tweets", :object => @queries.first.tweets ) %>
+	</div>
+</div>

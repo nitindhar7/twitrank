@@ -9,16 +9,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110404050041) do
+ActiveRecord::Schema.define(:version => 20110409041747) do
+
+  create_table "queries", :force => true do |t|
+    t.string   "text",       :limit => 140
+    t.datetime "query_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "location",   :limit => 100
+    t.integer  "latitude"
+    t.integer  "longitude"
+  end
 
   create_table "tweets", :force => true do |t|
     t.string   "text",             :limit => 140
     t.string   "user",             :limit => 100
-    t.string   "type",             :limit => 20
     t.integer  "retweets"
     t.datetime "tweet_created_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "location",         :limit => 50
+    t.integer  "query_id",                        :default => 1, :null => false
   end
 
 end
