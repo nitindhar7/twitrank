@@ -2,3 +2,5 @@
 .project
 config/database.yml
 log/*.log
+config/database.yml
+config/initializers/twitter.rb
