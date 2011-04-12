@@ -1,0 +1,25 @@
+<%= render :partial => "shared/searchbar" %>
+
+<div id="searches">
+	<h1><%= @client.rate_limit_status.remaining_hits.to_s + " Twitter API request(s) remaining this hour" %></h1>
+	<table cellpadding="0" cellspacing="0">
+		<thead>
+			<tr>
+				<th>Text</th>
+				<th>User</th>
+				<th>Location</th>
+				<th>Created At</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% for @tweet in @tweets %>
+				<tr>
+					<td><%= @tweet.text %></td>
+					<td><%= @tweet.from_user %></td>
+					<td><%= Twitter.user(@tweet.from_user).location %></td>
+					<td><%= @tweet.created_at.to_date.strftime("%Y-%m-%d") %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>

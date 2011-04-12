@@ -1,0 +1,2 @@
+page.replace_html( "edit_tweet_#{@tweet.id}", :partial => "tweet", :object => @tweet )
+page["tweet_#{@tweet.id}"].visual_effect :highlight, :startcolor => "#FFFFCC", :endcolor => "#FFFFFF"

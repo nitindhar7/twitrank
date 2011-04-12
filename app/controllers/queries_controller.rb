@@ -1,8 +1,14 @@
-require 'logger'
-
 class QueriesController < ApplicationController
   def index
     @queries = Query.all
+  end
+  
+  def new
+    
+  end
+  
+  def create
+    
   end
   
   def query_tweets

@@ -1,20 +1,39 @@
 require 'twitter'
 require 'csv'
 
-desc "read csv file, search twitter and store results"
+desc "Use Twitter OAuth to login, search twitter and store results"
 task :save_tweets => :environment do
+  include Geokit::Geocoders
   
-  @search = Twitter::Search.new
-  @queries = Query.find(:all, :conditions => "id > 163")
+  # latest row number 18
   
+  Twitter.configure do |config|
+    config.consumer_key = "VPOnFXqFJZ394HLSs4MnA"
+    config.consumer_secret = "VOHk80F7NvipnRaJSWiRYIROgbLjmCpzqUpnADDDfBY"
+    config.oauth_token = "94414262-Hg4KmGot4IILiPGOKkzEt2R5T16WFM927Ev6uPIiR"
+    config.oauth_token_secret = "RwlgjIK0VODW7pF0hCTbeUB5wdd7PmEFXm5jbmOTA"
+  end
+  
+  @client = Twitter::Client.new
+  @queries = Query.all
   i = 1
 
   @queries.each do |query|
     
     print "#{i}) "
-    
-    #@search.containing( query.text ).since( query[1].tr( ' ', '-' ) ).result_type( "popular" ).per_page( 5 ).each do |tweet|
-    Twitter::Search.new.containing( query.text ).no_retweets.geocode( query.latitude, query.longitude, "1000mi" ).lang("en").per_page( 5 ).each do |tweet|
+
+    Twitter::Search.new.containing( query.text ).no_retweets.geocode( query.latitude, query.longitude, "1000mi" ).lang("en").per_page( 10 ).each do |tweet|
+      @user = Twitter.user( tweet.from_user )
+      @query_geocode = MultiGeocoder.geocode( query.location )
+      @tweet_geocode = MultiGeocoder.geocode( tweet.location )
+      
+      tweet_length = tweet.text.split( ' ' ).length.to_f
+      query_length = query.text.split( ' ' ).length.to_f
+      percent_keywords = query_length / tweet_length * 100.0
+      distance = @query_geocode.distance_to( @tweet_geocode )
+      time_difference = ( ( tweet.created_at.to_time - query.query_date.to_time ) / 3600 )
+      
+      puts "#{percent_keywords} | #{@user.followers_count} | #{@user.friends_count} | #{@user.statuses_count} | #{@user.favourites_count} | #{distance} | #{time_difference}"
 
       new_tweet = Tweet.new( {
         :text => tweet.text,
@@ -22,20 +41,30 @@ task :save_tweets => :environment do
         :retweets => tweet.metadata.recent_retweets || 0,
         :tweet_created_at => tweet.created_at,
         :location => Twitter.user(tweet.from_user).location,
-        :query_id => query.id
+        :query_id => query.id,
+        :user_followers_count => @user.followers_count,
+        :user_friends_count => @user.friends_count,
+        :user_favorites_count => @user.favourites_count,
+        :user_statuses_count => @user.statuses_count,
+        :percent_keywords => percent_keywords,
+        :distance => distance,
+        :time_difference => time_difference
       } )
       
       if new_tweet.save
         puts "[#{tweet.created_at}] [#{tweet.text[0..80]}] [#{tweet.from_user}]"
       end
+
     end
 
     i += 1
     puts
   end
 
+  puts @client.rate_limit_status.remaining_hits.to_s + " Twitter API request(s) remaining this hour"  
 end
 
+desc "load queries from csv to db"
 task :load_queries => :environment do
   event_queries = []
   

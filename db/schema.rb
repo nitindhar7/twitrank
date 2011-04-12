@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110409041747) do
+ActiveRecord::Schema.define(:version => 20110412035350) do
 
   create_table "queries", :force => true do |t|
     t.string   "text",       :limit => 140
@@ -21,15 +21,29 @@ ActiveRecord::Schema.define(:version => 20110409041747) do
     t.integer  "longitude"
   end
 
+  create_table "searches", :force => true do |t|
+    t.string   "query",      :limit => 200, :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "tweets", :force => true do |t|
-    t.string   "text",             :limit => 140
-    t.string   "user",             :limit => 100
+    t.string   "text",                 :limit => 140
+    t.string   "user",                 :limit => 100
     t.integer  "retweets"
     t.datetime "tweet_created_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "location",         :limit => 50
-    t.integer  "query_id",                        :default => 1, :null => false
+    t.string   "location",             :limit => 50
+    t.integer  "query_id",                            :default => 1, :null => false
+    t.integer  "user_followers_count",                :default => 0
+    t.integer  "user_friends_count",                  :default => 0
+    t.integer  "user_statuses_count",                 :default => 0
+    t.integer  "user_favorites_count",                :default => 0
+    t.integer  "percent_keywords"
+    t.integer  "distance"
+    t.integer  "time_difference"
+    t.integer  "relevance",                           :default => 0
   end
 
 end

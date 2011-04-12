@@ -1,0 +1,4 @@
+<% form_remote_tag :url => searches_path, :method => :get, :html => { :id => "searchbar" } do %>
+	<%= text_field_tag(:query, nil, :class => "field") %>
+	<%= submit_tag("Search", :class => "button") %>
+<% end %>

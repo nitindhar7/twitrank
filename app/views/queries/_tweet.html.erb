@@ -1,4 +1,10 @@
-<tr>
+<tr id="tweet_<%= tweet.id %>">
+	<td>
+		<% remote_form_for(tweet) do |f| %>
+			<%= f.text_field :relevance %>
+			<%= f.submit "Update" %>
+		<% end %>
+	</td>
 	<td><%= tweet.text %></td>
 	<td><%= tweet.user %></td>
 	<td><%= tweet.location %></td>
