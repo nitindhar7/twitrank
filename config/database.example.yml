@@ -1,0 +1,17 @@
+development:
+  adapter: mysql
+  database: twitrank_development
+  username: YOUR_DEVELOPMENT_USERNAME
+  password: YOUR_DEVELOPMENT_PASSWORD
+
+test:
+  adapter: mysql
+  database: twitrank_test
+  username: YOUR_TEST_USERNAME
+  password: YOUR_TEST_PASSWORD
+
+production:
+  adapter: mysql
+  database: twitrank_production
+  username: YOUR_PRODUCTION_USERNAME
+  password: YOUR_PRODUCTION_PASSWORD 
