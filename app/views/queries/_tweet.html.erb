@@ -1,12 +1,12 @@
 <tr id="tweet_<%= tweet.id %>">
-	<td>
+	<td class="relevance">
 		<% remote_form_for(tweet) do |f| %>
-			<%= f.text_field :relevance %>
-			<%= f.submit "Update" %>
+			<%= f.text_field :relevance, :class => "field" %>
+			<%= f.submit "Update", :class => "button" %>
 		<% end %>
 	</td>
-	<td><%= tweet.text %></td>
-	<td><%= tweet.user %></td>
-	<td><%= tweet.location %></td>
-	<td><%= tweet.tweet_created_at.strftime("%Y-%m-%d") %></td>
+	<td class="text"><%= tweet.text %></td>
+	<td class="user"><%= tweet.user %></td>
+	<td class="location"><%= tweet.location %></td>
+	<td class="date"><%= tweet.tweet_created_at.strftime("%Y-%m-%d") %></td>
 </tr>
