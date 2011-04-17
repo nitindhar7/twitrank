@@ -43,34 +43,69 @@ body {
 	line-height: 30px;
 	background: #555;
 	color: #FFF;
+	clear: both;
 }
 
-#query_main table {
+#new_query_button {
+	position: relative;
+	margin-top: 5px;
+	width: 100px;
+	height: 20px;
+	line-height: 20px;
+	text-decoration: underline;
+	cursor: pointer;
+	float: right;
+}
+
+#query_main_header {
+	width: 400px;
+	height: 24px;
+	border-bottom: 1px solid #999;
+}
+
+#query_main_header .header {
+	position: relative;
+	padding: 0 5px;
+	height: 24px;
+	line-height: 24px;
+	text-align: left;
+	font-weight: bold;
+	float: left;
+}
+
+#query_main_header .tweets { width: 75px; }
+#query_main_header .text { width: 140px; }
+#query_main_header .date { width: 70px; }
+#query_main_header .location { width: 50px; }
+
+#query_main_body {
 	width: 400px;
 }
 
-#query_main table thead tr,
-#query_main table tbody tr {
+#query_main_body .query_main_row {
 	width: 400px;
+	height: 30px;
+	border-bottom: 1px solid #EEE;
+	clear: both;
 }
 
-#query_main table tbody tr:hover {
+#query_main_body .query_main_row:hover {
 	background: #FFFFCC;
 }
 
-#query_main table thead tr th,
-#query_main table tbody tr td {
+#query_main_body .query_main_row .cell {
+	position: relative;
 	padding: 0 5px;
+	height: 30px;
+	line-height: 30px;
 	text-align: left;
-	line-height: 25px;
-	
+	float: left;
 }
 
-#query_main table thead tr th { border-bottom: 1px solid #999; }
-#query_main table tbody tr td { border-bottom: 1px solid #EEE; }
-
-#query_main table tbody tr td input {
-	width: 50px;
+#query_main_body .query_main_row .cell input {
+	position: relative;
+	margin-top: 5px;
+	width: 75px;
 	height: 20px;
 	cursor: pointer;
 	color: #FFF;
@@ -78,21 +113,18 @@ body {
 	border: 1px solid #000;
 	-moz-box-shadow: 0 0 5px #555;
 	-webkit-box-shadow: 0 0 5px #555;
+	float: left;
 }
 
-#query_main table tbody tr td input:hover {
+#query_main_body .query_main_row .cell input:hover {
 	-moz-box-shadow: 0 0 10px #999;
 	-webkit-box-shadow: 0 0 10px #999;
 }
 
-#query_main table thead tr .tweets { width: 50px; }
-#query_main table thead tr .text { width: 110px; }
-#query_main table thead tr .date { width: 90px; }
-#query_main table thead tr .location { width: 50px; }
-#query_main table tbody tr .tweets { width: 50px; }
-#query_main table tbody tr .text { width: 110px; }
-#query_main table tbody tr .date { width: 90px; }
-#query_main table tbody tr .location { width: 50px; }
+#query_main_body .query_main_row .tweets { width: 75px; }
+#query_main_body .query_main_row .text { width: 140px; }
+#query_main_body .query_main_row .date { width: 70px; }
+#query_main_body .query_main_row .location { width: 50px; }
 
 #query_tweets {
 	margin-left: 10px;
@@ -244,5 +276,50 @@ body {
 	line-height: 40px;
 	color: #FFF;
 	background: #555;
+	cursor: pointer;
+}
+
+#new_query_form {
+	margin-top: 10px;
+	width: 400px;
+	height: 250px;
+	clear: both;
+	display: none;
+}
+
+#new_query_form label {
+	position: relative;
+	margin-bottom: 10px;
+	width: 75px;
+	height: 30px;
+	line-height: 30px;
+	float: left;
+}
+
+#new_query_form input {
+	position: relative;
+	padding: 9px 5px;
+	margin-bottom: 10px;
+	width: 303px;
+	height: 12px;
+	line-height: 12px;
+	font-size: 12px;
+	float: left;
+	border: 1px solid #999;
+	-moz-box-shadow: 0 0 5px #CCC;
+	-webkit-box-shadow: 0 0 5px #CCC;
+}
+
+#new_query_form input:hover {
+	-moz-box-shadow: 0 0 10px #999;
+	-webkit-box-shadow: 0 0 10px #999;
+}
+
+#new_query_form .button {
+	margin-left: 75px;
+	padding: 0;
+	width: 315px;
+	height: 30px;
+	line-height: 30px;
 	cursor: pointer;
 }

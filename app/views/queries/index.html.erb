@@ -2,31 +2,40 @@
 
 <div id="queries">
 	<div id="query_main">
-		<h1>Event Queries</h1>
-		<table cellpadding="0" cellspacing="0">
-			<thead>
-				<tr>
-					<th class="tweets"></th>
-					<th class="text">Text</th>
-					<th class="date">Date</th>
-					<th class="location">Location</th>
-				</tr>
-			</thead>
-			<tbody>
-				<% for @query in @queries %>
-					<tr>
-						<td class="tweets">
-							<% form_remote_tag :url => { :action => "query_tweets", :id => @query } do %>
-								<%= submit_tag "Tweets" %>
-							<% end %>
-						</td>
-						<td class="text"><%= @query.text %></td>
-						<td class="date"><%= @query.query_date.strftime("%Y-%m-%d") %></td>
-						<td class="location"><%= @query.location %></td>
-					</tr>
-				<% end %>
-			</tbody>
-		</table>
+		<h1>Event Queries<div id="new_query_button" onclick="toggleNewQueryForm()">Add an Event +</div></h1>
+		<% form_remote_tag(:url => {:action => :create}, :method => "post", :html => {:id => "new_query_form"}) do %>
+			<%= label_tag(:text, "Text") %>
+			<%= text_field_tag(:text, nil, :class => "field") %>
+			<%= label_tag(:query_date, "Event Date") %>
+			<%= text_field_tag(:query_date, nil, :class => "field") %>
+			<%= label_tag(:location, "Location") %>
+			<%= text_field_tag(:location, nil, :class => "field") %>
+			<%= label_tag(:latitude, "Latitude") %>
+			<%= text_field_tag(:latitude, nil, :class => "field") %>
+			<%= label_tag(:longitude, "Longitude") %>
+			<%= text_field_tag(:longitude, nil, :class => "field") %>
+			<%= submit_tag("Create", :class => "button", :onclick => "toggleNewQueryForm()") %>
+		<% end %>
+		<div id="query_main_header">
+			<div class="header tweets"></div>
+			<div class="header text">Text</div>
+			<div class="header date">Date</div>
+			<div class="header location">Location</div>
+		</div>
+		<div id="query_main_body">
+			<% for @query in @queries %>
+				<div id="query_<%= @query.id %>" class="query_main_row">
+					<div class="cell tweets">
+						<% form_remote_tag :url => { :action => "query_tweets", :id => @query } do %>
+							<%= submit_tag "(#{@query.tweets.count}) Tweets" %>
+						<% end %>
+					</div>
+					<div class="cell text"><%= @query.text %></div>
+					<div class="cell date"><%= @query.query_date.strftime("%Y-%m-%d") %></div>
+					<div class="cell location"><%= @query.location %></div>
+				</div>
+			<% end %>
+		</div>
 	</div>
 	
 	<div id="query_tweets">

@@ -1,0 +1,10 @@
+<div id="query_<%= @query.id %>" class="query_main_row">
+	<div class="cell tweets">
+		<% form_remote_tag :url => { :action => "query_tweets", :id => @query } do %>
+			<%= submit_tag "(#{@query.tweets.count}) Tweets" %>
+		<% end %>
+	</div>
+	<div class="cell text"><%= @query.text %></div>
+	<div class="cell date"><%= @query.query_date.strftime("%Y-%m-%d") %></div>
+	<div class="cell location"><%= @query.location %></div>
+</div>

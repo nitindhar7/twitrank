@@ -1,0 +1,2 @@
+page.insert_html :top, 'query_main_body', :partial => 'query'
+page["query_#{@query.id}"].visual_effect :highlight, :startcolor => "#FFFFCC", :endcolor => "#FFFFFF"
