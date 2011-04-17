@@ -1,0 +1,165 @@
+--- !ruby/object:Gem::Specification 
+name: rack
+version: !ruby/object:Gem::Version 
+  hash: 23
+  prerelease: 
+  segments: 
+  - 1
+  - 1
+  - 2
+  version: 1.1.2
+platform: ruby
+authors: 
+- Christian Neukirchen
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2011-03-12 00:00:00 -05:00
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: test-spec
+  prerelease: false
+  requirement: &id001 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 3
+        segments: 
+        - 0
+        version: "0"
+  type: :development
+  version_requirements: *id001
+- !ruby/object:Gem::Dependency 
+  name: camping
+  prerelease: false
+  requirement: &id002 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - <
+      - !ruby/object:Gem::Version 
+        hash: 5
+        segments: 
+        - 1
+        - 5
+        version: "1.5"
+  type: :development
+  version_requirements: *id002
+- !ruby/object:Gem::Dependency 
+  name: fcgi
+  prerelease: false
+  requirement: &id003 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 3
+        segments: 
+        - 0
+        version: "0"
+  type: :development
+  version_requirements: *id003
+- !ruby/object:Gem::Dependency 
+  name: memcache-client
+  prerelease: false
+  requirement: &id004 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 3
+        segments: 
+        - 0
+        version: "0"
+  type: :development
+  version_requirements: *id004
+- !ruby/object:Gem::Dependency 
+  name: mongrel
+  prerelease: false
+  requirement: &id005 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 3
+        segments: 
+        - 0
+        version: "0"
+  type: :development
+  version_requirements: *id005
+- !ruby/object:Gem::Dependency 
+  name: thin
+  prerelease: false
+  requirement: &id006 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - <
+      - !ruby/object:Gem::Version 
+        hash: 11
+        segments: 
+        - 1
+        - 2
+        version: "1.2"
+  type: :development
+  version_requirements: *id006
+description: |
+  Rack provides minimal, modular and adaptable interface for developing
+  web applications in Ruby.  By wrapping HTTP requests and responses in
+  the simplest way possible, it unifies and distills the API for web
+  servers, web frameworks, and software in between (the so-called
+  middleware) into a single method call.
+  
+  Also see http://rack.rubyforge.org.
+
+email: chneukirchen@gmail.com
+executables: 
+- rackup
+extensions: []
+
+extra_rdoc_files: 
+- README
+- SPEC
+- KNOWN-ISSUES
+files: 
+- bin/rackup
+- README
+- SPEC
+- KNOWN-ISSUES
+has_rdoc: true
+homepage: http://rack.rubyforge.org
+licenses: []
+
+post_install_message: 
+rdoc_options: []
+
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+requirements: []
+
+rubyforge_project: rack
+rubygems_version: 1.4.2
+signing_key: 
+specification_version: 3
+summary: a modular Ruby webserver interface
+test_files: []
+

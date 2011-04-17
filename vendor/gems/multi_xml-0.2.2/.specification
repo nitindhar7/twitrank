@@ -1,0 +1,187 @@
+--- !ruby/object:Gem::Specification 
+name: multi_xml
+version: !ruby/object:Gem::Version 
+  hash: 19
+  prerelease: 
+  segments: 
+  - 0
+  - 2
+  - 2
+  version: 0.2.2
+platform: ruby
+authors: 
+- Erik Michaels-Ober
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2011-03-20 00:00:00 -04:00
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: libxml-ruby
+  prerelease: false
+  requirement: &id001 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ~>
+      - !ruby/object:Gem::Version 
+        hash: 13
+        segments: 
+        - 1
+        - 1
+        version: "1.1"
+  type: :development
+  version_requirements: *id001
+- !ruby/object:Gem::Dependency 
+  name: maruku
+  prerelease: false
+  requirement: &id002 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ~>
+      - !ruby/object:Gem::Version 
+        hash: 7
+        segments: 
+        - 0
+        - 6
+        version: "0.6"
+  type: :development
+  version_requirements: *id002
+- !ruby/object:Gem::Dependency 
+  name: nokogiri
+  prerelease: false
+  requirement: &id003 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ~>
+      - !ruby/object:Gem::Version 
+        hash: 7
+        segments: 
+        - 1
+        - 4
+        version: "1.4"
+  type: :development
+  version_requirements: *id003
+- !ruby/object:Gem::Dependency 
+  name: rake
+  prerelease: false
+  requirement: &id004 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ~>
+      - !ruby/object:Gem::Version 
+        hash: 27
+        segments: 
+        - 0
+        - 8
+        version: "0.8"
+  type: :development
+  version_requirements: *id004
+- !ruby/object:Gem::Dependency 
+  name: rspec
+  prerelease: false
+  requirement: &id005 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ~>
+      - !ruby/object:Gem::Version 
+        hash: 9
+        segments: 
+        - 2
+        - 5
+        version: "2.5"
+  type: :development
+  version_requirements: *id005
+- !ruby/object:Gem::Dependency 
+  name: simplecov
+  prerelease: false
+  requirement: &id006 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ~>
+      - !ruby/object:Gem::Version 
+        hash: 3
+        segments: 
+        - 0
+        - 4
+        version: "0.4"
+  type: :development
+  version_requirements: *id006
+- !ruby/object:Gem::Dependency 
+  name: yard
+  prerelease: false
+  requirement: &id007 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ~>
+      - !ruby/object:Gem::Version 
+        hash: 7
+        segments: 
+        - 0
+        - 6
+        version: "0.6"
+  type: :development
+  version_requirements: *id007
+- !ruby/object:Gem::Dependency 
+  name: ZenTest
+  prerelease: false
+  requirement: &id008 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ~>
+      - !ruby/object:Gem::Version 
+        hash: 17
+        segments: 
+        - 4
+        - 5
+        version: "4.5"
+  type: :development
+  version_requirements: *id008
+description: A gem to provide swappable XML backends utilizing LibXML, Nokogiri, or REXML.
+email: 
+- sferik@gmail.com
+executables: []
+
+extensions: []
+
+extra_rdoc_files: []
+
+files: []
+
+has_rdoc: true
+homepage: http://rubygems.org/gems/multi_xml
+licenses: []
+
+post_install_message: 
+rdoc_options: []
+
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+requirements: []
+
+rubyforge_project: multi_xml
+rubygems_version: 1.4.2
+signing_key: 
+specification_version: 3
+summary: A generic swappable back-end for XML parsing
+test_files: []
+
