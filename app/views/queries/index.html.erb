@@ -2,19 +2,19 @@
 
 <div id="queries">
 	<div id="query_main">
-		<h1>Event Queries<div id="new_query_button" onclick="toggleNewQueryForm()">Add an Event +</div></h1>
+		<h1 id="query_main_title">Event Queries (<%= @queries.length %>)<div id="new_query_button" onclick="toggleNewQueryForm()">Add an Event +</div></h1>
 		<% form_remote_tag(:url => {:action => :create}, :method => "post", :html => {:id => "new_query_form"}) do %>
 			<%= label_tag(:text, "Text") %>
-			<%= text_field_tag(:text, nil, :class => "field") %>
+			<%= text_field_tag(:text, nil, :class => "field", :autocomplete => "off") %>
 			<%= label_tag(:query_date, "Event Date") %>
-			<%= text_field_tag(:query_date, nil, :class => "field") %>
+			<%= text_field_tag(:query_date, nil, :class => "field", :autocomplete => "off") %>
 			<%= label_tag(:location, "Location") %>
-			<%= text_field_tag(:location, nil, :class => "field") %>
+			<%= text_field_tag(:location, nil, :class => "field", :autocomplete => "off") %>
 			<%= label_tag(:latitude, "Latitude") %>
-			<%= text_field_tag(:latitude, nil, :class => "field") %>
+			<%= text_field_tag(:latitude, nil, :class => "field", :autocomplete => "off") %>
 			<%= label_tag(:longitude, "Longitude") %>
-			<%= text_field_tag(:longitude, nil, :class => "field") %>
-			<%= submit_tag("Create", :class => "button", :onclick => "toggleNewQueryForm()") %>
+			<%= text_field_tag(:longitude, nil, :class => "field", :autocomplete => "off") %>
+			<%= submit_tag("Create", :class => "button") %>
 		<% end %>
 		<div id="query_main_header">
 			<div class="header tweets"></div>

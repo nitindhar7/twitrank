@@ -1,2 +1,4 @@
 page.insert_html :top, 'query_main_body', :partial => 'query'
 page["query_#{@query.id}"].visual_effect :highlight, :startcolor => "#FFFFCC", :endcolor => "#FFFFFF"
+page.hide 'new_query_form'
+page.replace 'query_main_title', :partial => 'query_main_title', :object => @queries.length

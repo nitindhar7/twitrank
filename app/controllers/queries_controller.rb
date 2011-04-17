@@ -1,6 +1,7 @@
 class QueriesController < ApplicationController
+  before_filter :load_queries, :only => [:index, :create]
+  
   def index
-    @queries = Query.all(:order => "created_at DESC")
   end
   
   def create
@@ -23,6 +24,12 @@ class QueriesController < ApplicationController
     respond_to do |format|
       format.js
     end
+  end
+  
+  private
+  
+  def load_queries
+    @queries = Query.all(:order => "query_date DESC")
   end
 
 end
