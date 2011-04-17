@@ -1,0 +1,86 @@
+--- !ruby/object:Gem::Specification 
+name: geokit
+version: !ruby/object:Gem::Version 
+  hash: 3
+  prerelease: 
+  segments: 
+  - 1
+  - 5
+  - 0
+  version: 1.5.0
+platform: ruby
+authors: 
+- Andre Lewis
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2009-09-21 00:00:00 -04:00
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: hoe
+  prerelease: false
+  requirement: &id001 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 35
+        segments: 
+        - 1
+        - 12
+        - 2
+        version: 1.12.2
+  type: :development
+  version_requirements: *id001
+description: ""
+email: 
+- andre@earthcode.com
+executables: []
+
+extensions: []
+
+extra_rdoc_files: 
+- History.txt
+- Manifest.txt
+files: 
+- History.txt
+- Manifest.txt
+has_rdoc: true
+homepage: 
+licenses: []
+
+post_install_message: 
+rdoc_options: 
+- --main
+- README.txt
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+requirements: []
+
+rubyforge_project: geokit
+rubygems_version: 1.4.2
+signing_key: 
+specification_version: 3
+summary: Geokit provides geocoding and distance calculation in an easy-to-use API
+test_files: []
+
