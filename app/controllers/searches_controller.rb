@@ -1,4 +1,3 @@
-require 'rubygems'
 require 'twitter'
 
 class SearchesController < ApplicationController
