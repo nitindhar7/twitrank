@@ -98,73 +98,90 @@ body {
 	margin-left: 10px;
 	width: 669px;
 	float: left;
+	overflow: scroll;
 }
 
 #query_tweets h1 {
 	padding: 0 10px;
-	width: 649px;
+	width: 1140px;
 	height: 30px;
 	line-height: 30px;
 	background: #555;
 	color: #FFF;
 }
 
-#query_tweets table {
-	width: 669px;
-}
-
-#query_tweets table thead,
-#query_tweets table tbody {
-	width: 669px;
-}	
-
-#query_tweets table thead tr,
-#query_tweets table tbody tr {
-	width: 669px;
-}
-
-#query_tweets table tbody tr:hover {
-	background: #FFFFCC;
-}
-
-#query_tweets table thead tr {
-	height: 25px;
-}
-
-#query_tweets table tbody tr {
-	height: 80px;
-}
-
-#query_tweets table thead tr th {
-	padding: 0 5px;
-	line-height: 25px;
-	text-align: left;
+#query_tweets_header {
+	width: 1160px;
+	height: 24px;
 	border-bottom: 1px solid #999;
+	clear: both;
 }
 
-#query_tweets table tbody tr td {
+#query_tweets_header .header {
+	position: relative;
 	padding: 0 5px;
-	line-height: 18px;
+	min-width: 24px;
+	height: 24px;
+	line-height: 24px;
+	font-weight: bold;
+	text-align: left;
+	float: left;
+}
+
+#query_tweets_header .relevance { width: 60px; }
+#query_tweets_header .text { width: 250px; }
+#query_tweets_header .user { width: 110px; }
+#query_tweets_header .location { width: 120px; }
+#query_tweets_header .date { width: 80px; }
+#query_tweets_header .followers { width: 60px; }
+#query_tweets_header .friends { width: 60px; }
+#query_tweets_header .favorites { width: 60px; }
+#query_tweets_header .statuses { width: 60px; }
+#query_tweets_header .keywords { width: 60px; }
+#query_tweets_header .distance { width: 60px; }
+#query_tweets_header .time_diff { width: 60px; }
+
+#query_tweets_body {
+	width: 1160px;
+}
+
+#query_tweets_body .query_tweets_row {
+	width: 1160px;
+	height: 79px;
 	border-bottom: 1px solid #EEE;
 }
 
-#query_tweets table thead tr .relevance { width: 50px; }
-#query_tweets table thead tr .text { width: 250px; }
-#query_tweets table thead tr .user { width: 40px; }
-#query_tweets table thead tr .location { width: 50px; }
-#query_tweets table thead tr .date { width: 60px; }
-#query_tweets table tbody tr .relevance { width: 50px; }
-#query_tweets table tbody tr .text { width: 250px; }
-#query_tweets table tbody tr .user { width: 40px; }
-#query_tweets table tbody tr .location { width: 50px; }
-#query_tweets table tbody tr .date { width: 60px; }
+#query_tweets_body .query_tweets_row:hover {
+	background: #FFFFCC;
+}
 
-#query_tweets table tbody tr td .edit_tweet {
+#query_tweets_body .query_tweets_row .cell {
+	position: relative;
+	padding: 0 5px;
+	height: 79px;
+	line-height: 18px;
+	float: left;
+}
+
+#query_tweets_body .query_tweets_row .relevance { width: 60px; }
+#query_tweets_body .query_tweets_row .text { width: 250px; }
+#query_tweets_body .query_tweets_row .user { width: 110px; }
+#query_tweets_body .query_tweets_row .location { width: 120px; }
+#query_tweets_body .query_tweets_row .date { width: 80px; }
+#query_tweets_body .query_tweets_row .followers { width: 60px; }
+#query_tweets_body .query_tweets_row .friends { width: 60px; }
+#query_tweets_body .query_tweets_row .favorites { width: 60px; }
+#query_tweets_body .query_tweets_row .statuses { width: 60px; }
+#query_tweets_body .query_tweets_row .keywords { width: 60px; }
+#query_tweets_body .query_tweets_row .distance { width: 60px; }
+#query_tweets_body .query_tweets_row .time_diff { width: 60px; }
+
+#query_tweets_body .query_tweets_row .relevance .edit_tweet {
 	width: 50px;
 	height: 80px;
 }
 
-#query_tweets table tbody tr td .edit_tweet input {
+#query_tweets_body .query_tweets_row .relevance .edit_tweet input {
 	margin-top: 10px;
 	width: 50px;
 	height: 25px;
@@ -173,18 +190,18 @@ body {
 	-webkit-box-shadow: 0 0 5px #CCC;
 }
 
-#query_tweets table tbody tr td .edit_tweet input:hover {
+#query_tweets_body .query_tweets_row .relevance .edit_tweet input:hover {
 	-moz-box-shadow: 0 0 10px #999;
 	-webkit-box-shadow: 0 0 10px #999;
 }
 
-#query_tweets table tbody tr td .edit_tweet .field {
+#query_tweets_body .query_tweets_row .relevance .edit_tweet .field {
 	padding: 0 5px;
 	width: 38px;
 	height: 23px;
 }
 
-#query_tweets table tbody tr td .edit_tweet .button {
+#query_tweets_body .query_tweets_row .relevance .edit_tweet .button {
 	border: 1px solid #999;
 	color: #FFF;
 	background: #3B5998;
@@ -201,8 +218,6 @@ body {
 
 #searchbar input {
 	position: relative;
-	height: 40px;
-	line-height: 40px;
 	float: left;
 	border: 1px solid #999;
 	-moz-box-shadow: 0 0 5px #CCC;
@@ -215,14 +230,18 @@ body {
 }
 
 #searchbar .field {
-	padding: 0 10px;
+	padding: 10px 10px;
 	width: 1018px;
+	height: 18px;
+	line-height: 18px;
 	font-size: 18px;
 }
 
 #searchbar .button {
 	margin-left: 10px;
 	width: 50px;
+	height: 40px;
+	line-height: 40px;
 	color: #FFF;
 	background: #555;
 	cursor: pointer;

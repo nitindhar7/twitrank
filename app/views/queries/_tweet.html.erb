@@ -1,12 +1,19 @@
-<tr id="tweet_<%= tweet.id %>">
-	<td class="relevance">
+<div id="tweet_<%= tweet.id %>" class="query_tweets_row">
+	<div class="cell relevance">
 		<% remote_form_for(tweet) do |f| %>
 			<%= f.text_field :relevance, :class => "field" %>
 			<%= f.submit "Update", :class => "button" %>
 		<% end %>
-	</td>
-	<td class="text"><%= tweet.text %></td>
-	<td class="user"><%= tweet.user %></td>
-	<td class="location"><%= tweet.location %></td>
-	<td class="date"><%= tweet.tweet_created_at.strftime("%Y-%m-%d") %></td>
-</tr>
+	</div>
+	<div class="cell text"><%= tweet.text %></div>
+	<div class="cell user"><%= tweet.user %></div>
+	<div class="cell location"><%= tweet.location %></div>
+	<div class="cell date"><%= tweet.tweet_created_at.strftime("%Y-%m-%d") %></div>
+	<div class="cell followers"><%= tweet.user_followers_count %></div>
+	<div class="cell friends"><%= tweet.user_friends_count %></div>
+	<div class="cell favorites"><%= tweet.user_favorites_count %></div>
+	<div class="cell statuses"><%= tweet.user_statuses_count %></div>
+	<div class="cell keywords"><%= tweet.percent_keywords %></div>
+	<div class="cell distance"><%= tweet.distance %> mi</div>
+	<div class="cell time_diff"><%= tweet.time_difference %> hrs</div>
+</div>

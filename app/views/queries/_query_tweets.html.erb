@@ -1,15 +1,18 @@
 <h1>Tweets</h1>
-<table cellpadding="0" cellspacing="0">
-	<thead>
-		<tr>
-			<th class="relevance">Relevance</th>
-			<th class="text">Text</th>
-			<th class="user">User</th>
-			<th class="location">Location</th>
-			<th class="date">Date</th>
-		</tr>
-	</thead>
-	<tbody>
-		<%= render( :partial => "tweet", :collection => query_tweets ) %>
-	</tbody>
-</table>
+<div id="query_tweets_header">
+	<div class="header relevance">Relevance</div>
+	<div class="header text">Text</div>
+	<div class="header user">User</div>
+	<div class="header location">Location</div>
+	<div class="header date">Date</div>
+	<div class="header followers">Followers</div>
+	<div class="header friends">Friends</div>
+	<div class="header favorites">Favorites</div>
+	<div class="header statuses">Statuses</div>
+	<div class="header keywords">% Words</div>
+	<div class="header distance">Distance</div>
+	<div class="header time_diff">Time Diff</div>
+</div>
+<div id="query_tweets_body">
+	<%= render( :partial => "tweet", :collection => query_tweets ) %>
+</div>

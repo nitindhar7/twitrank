@@ -8,14 +8,16 @@ task :save_tweets => :environment do
   # latest row number 18
   
   @client = Twitter::Client.new
-  @queries = Query.all
+  puts @client.rate_limit_status.remaining_hits.to_s + " Twitter API request(s) remaining this hour"
+  
+  @queries = Query.find(:all, :conditions => {:id => 144})
   i = 1
 
   @queries.each do |query|
     
     print "#{i}) "
 
-    Twitter::Search.new.containing( query.text ).no_retweets.geocode( query.latitude, query.longitude, "1000mi" ).lang("en").per_page( 10 ).each do |tweet|
+    Twitter::Search.new.containing( query.text ).no_retweets.geocode( query.latitude, query.longitude, "1000mi" ).lang("en").per_page( 50 ).each do |tweet|
       @user = Twitter.user( tweet.from_user )
       @query_geocode = MultiGeocoder.geocode( query.location )
       @tweet_geocode = MultiGeocoder.geocode( tweet.location )
@@ -52,9 +54,7 @@ task :save_tweets => :environment do
 
     i += 1
     puts
-  end
-
-  puts @client.rate_limit_status.remaining_hits.to_s + " Twitter API request(s) remaining this hour"  
+  end  
 end
 
 desc "load queries from csv to db"

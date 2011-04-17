@@ -1,6 +1,6 @@
-<tr id="tweet_<%= tweet.id %>">
-	<td class="text"><%= tweet.text %></td>
-	<td class="user"><%= tweet.from_user %></td>
-	<td class="location"><%= tweet.location %></td>
-	<td class="date"><%= tweet.created_at %></td>
-</tr>
+<div id="tweet_<%= tweet.id %>" class="query_tweets_row">
+	<div class="cell text"><%= tweet.text %></div>
+	<div class="cell user"><%= tweet.from_user %></div>
+	<div class="cell location"><%= Twitter.user(tweet.from_user).location %></div>
+	<div class="cell date"><%= tweet.created_at.to_date %></div>
+</div>
