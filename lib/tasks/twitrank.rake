@@ -5,12 +5,10 @@ desc "Use Twitter OAuth to login, search twitter and store results"
 task :save_tweets => :environment do
   include Geokit::Geocoders
   
-  # latest row number 18
-  
   @client = Twitter::Client.new
   puts @client.rate_limit_status.remaining_hits.to_s + " Twitter API request(s) remaining this hour"
   
-  @queries = Query.find(:all, :conditions => {:id => 167})
+  @queries = Query.find(:all, :conditions => {:id => 189})
   i = 1
 
   @queries.each do |query|
