@@ -8,7 +8,7 @@ task :save_tweets => :environment do
   @client = Twitter::Client.new
   puts @client.rate_limit_status.remaining_hits.to_s + " Twitter API request(s) remaining this hour"
   
-  @queries = Query.find(:all, :conditions => {:id => 188})
+  @queries = Query.find(:all, :conditions => {:id => 186})
   i = 1
 
   @queries.each do |query|
