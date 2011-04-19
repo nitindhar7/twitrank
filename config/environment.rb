@@ -2,8 +2,8 @@
 
 # Specifies gem version of Rails to use when vendor/rails is not present
 ENV['GEM_PATH'] = '/home2/basedata/ruby/gems:/usr/lib64/ruby/gems/1.8'
-ENV['RAILS_ENV'] ||= 'production'
-RAILS_GEM_VERSION = '2.3.11'# unless defined? RAILS_GEM_VERSION
+#ENV['RAILS_ENV'] ||= 'production'
+#RAILS_GEM_VERSION = '2.3.11' unless defined? RAILS_GEM_VERSION
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
