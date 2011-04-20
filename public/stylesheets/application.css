@@ -146,7 +146,38 @@ body {
 	width: 500px;
 	height: 30px;
 	border-bottom: 1px solid #EEE;
+	display: none;
 	clear: both;
+}
+
+#query_main_body .query_controls_row .button {
+	position: relative;
+	margin-top: 5px;
+	margin-left: 5px;
+	padding: 0 5px;
+	height: 18px;
+	line-height: 18px;
+	color: #FFF;
+	background: #3B5998;
+	cursor: pointer;
+	text-decoration: none;
+	border: 1px solid #000;
+	-moz-box-shadow: 0 0 5px #555;
+	-webkit-box-shadow: 0 0 5px #555;
+	float: left;
+}
+
+#query_main_body .query_controls_row .spinner {
+	position: relative;
+	margin-top: 5px;
+	margin-right: 5px;
+	padding: 0 5px;
+	width: 10px;
+	height: 18px;
+	line-height: 18px;
+	display: none;
+	background: url(/images/query_tweets_fetch_spinner.gif) no-repeat;
+	float: right;
 }
 
 #query_tweets {

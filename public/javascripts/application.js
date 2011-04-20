@@ -1,16 +1,7 @@
 $(document).ready(function() {
 	
-	//floatHeaderBar();
-	
-	$("#searchbar .field").focus();
-	
-	$("#query_tweets h1 input").live('click', function() {
-		var is_checked = $(this).attr("checked");
-		
-		if (is_checked)
-			$('#query_tweets_header').addClass("hoverable");
-		else 
-			$('#query_tweets_header').removeClass("hoverable");
+	$(window).scroll(function() {
+		//$('#query_tweets_header').css("top", $(window).scrollTop());
 	});
 	
 	$("#query_tweets_body .query_tweets_row").live('click', function() {
@@ -32,9 +23,24 @@ function toggleNewQueryForm()
 	$("#new_query_form .field:first").focus();
 }
 
-function floatHeaderBar()
+function toggleQueryControls(dropdown, query_controls_id)
 {
-	$(window).scroll(function() {
-		$('#query_tweets_header').css("top", $(window).scrollTop());
-	});
+	var display = $('#' + query_controls_id).css('display');
+	
+	if( display == 'none')
+		$('#' + dropdown).text('▲');
+	else
+		$('#' + dropdown).text('▼');
+	
+	$('#' + query_controls_id).slideToggle('fast');
+}
+
+function hideElement(selector)
+{
+	$('#' + selector).slideToggle('fast');
+}
+
+function showElement(selector)
+{
+	$('#' + selector).slideToggle('fast');
 }

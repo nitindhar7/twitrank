@@ -30,6 +30,13 @@ Example:
 		config.oauth_token_secret = YOUR_OAUTH_TOKEN_SECRET
 	end
 
+Tweets are fetched in pages. Each page can have upto 100 tweets if available. This option can be set in the tweet model 'app/models/Tweet.rb'
+View the model method "per_page" to change this setting:
+
+	def self.per_page
+		50
+	end   
+
 Architecture
 ------------
 Our system is composed of five main components:
