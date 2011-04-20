@@ -2,7 +2,7 @@ class QueriesController < ApplicationController
   before_filter :load_queries, :only => [:index, :create]
   
   def index
-    @tweets = @queries.first.tweets
+    @tweets = @queries.first.tweets unless @queries.first.blank?
   end
   
   def create
