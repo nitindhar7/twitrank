@@ -1,11 +1,11 @@
 <div id="tweet_<%= tweet.id %>" class="query_tweets_row">
 	<div class="cell relevance">
 		<% remote_form_for(tweet) do |f| %>
-			<%= f.text_field :relevance, :class => "field" %>
+			<%= f.select(:relevance, [['0', 0], ['1', 1], ['2', 2], ['3', 3]]) %>
 			<%= f.submit "Update", :class => "button" %>
 		<% end %>
 	</div>
-	<div class="cell text"><%= tweet.text %></div>
+	<div class="cell text"><%= auto_link( tweet.text, nil, { :target => "_blank" } ) %></div>
 	<div class="cell user"><%= tweet.user %></div>
 	<div class="cell location"><%= tweet.location %></div>
 	<div class="cell date"><%= tweet.tweet_created_at.strftime("%Y-%m-%d") %></div>

@@ -1,4 +1,4 @@
 <% remote_form_for(tweet) do |f| %>
-	<%= f.text_field :relevance %>
-	<%= f.submit "Update" %>
+	<%= f.select(:relevance, [['0', 0], ['1', 1], ['2', 2], ['3', 3]]) %>
+	<%= f.submit "Update", :class => "button" %>
 <% end %>

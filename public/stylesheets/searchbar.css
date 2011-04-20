@@ -1,0 +1,45 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 11px;
+	font-family: "Trebuchet MS" Helvetica Tahoma;
+	outline: none;
+}
+
+#searchbar {
+	margin: auto;
+	margin-bottom: 20px;
+	width: 1100px;
+	height: 40px;
+}
+
+#searchbar input {
+	position: relative;
+	float: left;
+	border: 1px solid #999;
+	-moz-box-shadow: 0 0 5px #CCC;
+	-webkit-box-shadow: 0 0 5px #CCC;
+}
+
+#searchbar input:hover {
+	-moz-box-shadow: 0 0 10px #999;
+	-webkit-box-shadow: 0 0 10px #999;
+}
+
+#searchbar .field {
+	padding: 10px 10px;
+	width: 1018px;
+	height: 18px;
+	line-height: 18px;
+	font-size: 18px;
+}
+
+#searchbar .button {
+	margin-left: 10px;
+	width: 50px;
+	height: 40px;
+	line-height: 40px;
+	color: #FFF;
+	background: #555;
+	cursor: pointer;
+}

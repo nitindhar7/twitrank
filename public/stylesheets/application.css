@@ -31,14 +31,14 @@ body {
 }
 
 #query_main {
-	width: 400px;
+	width: 500px;
 	border-right: 1px solid #999;
 	float: left;
 }
 
 #query_main h1 {
 	padding: 0 10px;
-	width: 380px;
+	width: 480px;
 	height: 30px;
 	line-height: 30px;
 	background: #555;
@@ -58,9 +58,11 @@ body {
 }
 
 #query_main_header {
-	width: 400px;
+	width: 500px;
 	height: 24px;
 	border-bottom: 1px solid #999;
+	-moz-box-shadow: 0 0 5px #999;
+	-webkit-box-shadow: 0 0 5px #999;
 }
 
 #query_main_header .header {
@@ -74,22 +76,26 @@ body {
 }
 
 #query_main_header .tweets { width: 75px; }
-#query_main_header .text { width: 140px; }
+#query_main_header .text { width: 190px; }
 #query_main_header .date { width: 70px; }
-#query_main_header .location { width: 50px; }
+#query_main_header .location { width: 100px; }
 
 #query_main_body {
-	width: 400px;
+	width: 500px;
 }
 
 #query_main_body .query_main_row {
-	width: 400px;
+	width: 500px;
 	height: 30px;
 	border-bottom: 1px solid #EEE;
 	clear: both;
 }
 
 #query_main_body .query_main_row:hover {
+	background: #FFFFCC;
+}
+
+#query_main_body .active {
 	background: #FFFFCC;
 }
 
@@ -122,13 +128,13 @@ body {
 }
 
 #query_main_body .query_main_row .tweets { width: 75px; }
-#query_main_body .query_main_row .text { width: 140px; }
+#query_main_body .query_main_row .text { width: 190px; }
 #query_main_body .query_main_row .date { width: 70px; }
-#query_main_body .query_main_row .location { width: 50px; }
+#query_main_body .query_main_row .location { width: 100px; }
 
 #query_tweets {
 	margin-left: 10px;
-	width: 669px;
+	width: 569px;
 	float: left;
 	overflow: scroll;
 }
@@ -142,11 +148,23 @@ body {
 	color: #FFF;
 }
 
+#query_tweets h1 input {
+	width: 28px;
+	height: 28px;
+	line-height: 28px;
+	float: left;
+}
+
 #query_tweets_header {
+	position: relative;
 	width: 1160px;
 	height: 24px;
 	border-bottom: 1px solid #999;
+	background: #FFF;
+	z-index: 10;
 	clear: both;
+	-moz-box-shadow: 0 0 5px #999;
+	-webkit-box-shadow: 0 0 5px #999;
 }
 
 #query_tweets_header .header {
@@ -187,6 +205,10 @@ body {
 	background: #FFFFCC;
 }
 
+#query_tweets_body .active {
+	background: #FFFFCC;
+}
+
 #query_tweets_body .query_tweets_row .cell {
 	position: relative;
 	padding: 0 5px;
@@ -213,7 +235,7 @@ body {
 	height: 80px;
 }
 
-#query_tweets_body .query_tweets_row .relevance .edit_tweet input {
+#query_tweets_body .query_tweets_row .relevance .edit_tweet input, #query_tweets_body .query_tweets_row .relevance .edit_tweet select {
 	margin-top: 10px;
 	width: 50px;
 	height: 25px;
@@ -227,55 +249,10 @@ body {
 	-webkit-box-shadow: 0 0 10px #999;
 }
 
-#query_tweets_body .query_tweets_row .relevance .edit_tweet .field {
-	padding: 0 5px;
-	width: 38px;
-	height: 23px;
-}
-
 #query_tweets_body .query_tweets_row .relevance .edit_tweet .button {
 	border: 1px solid #999;
 	color: #FFF;
 	background: #3B5998;
-	cursor: pointer;
-}
-
-#searchbar {
-	margin: auto;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	width: 1100px;
-	height: 40px;
-}
-
-#searchbar input {
-	position: relative;
-	float: left;
-	border: 1px solid #999;
-	-moz-box-shadow: 0 0 5px #CCC;
-	-webkit-box-shadow: 0 0 5px #CCC;
-}
-
-#searchbar input:hover {
-	-moz-box-shadow: 0 0 10px #999;
-	-webkit-box-shadow: 0 0 10px #999;
-}
-
-#searchbar .field {
-	padding: 10px 10px;
-	width: 1018px;
-	height: 18px;
-	line-height: 18px;
-	font-size: 18px;
-}
-
-#searchbar .button {
-	margin-left: 10px;
-	width: 50px;
-	height: 40px;
-	line-height: 40px;
-	color: #FFF;
-	background: #555;
 	cursor: pointer;
 }
 
