@@ -76,9 +76,9 @@ body {
 }
 
 #query_main_header .tweets { width: 75px; }
-#query_main_header .text { width: 190px; }
+#query_main_header .text { width: 180px; }
 #query_main_header .date { width: 70px; }
-#query_main_header .location { width: 100px; }
+#query_main_header .location { width: 90px; }
 
 #query_main_body {
 	width: 500px;
@@ -128,9 +128,26 @@ body {
 }
 
 #query_main_body .query_main_row .tweets { width: 75px; }
-#query_main_body .query_main_row .text { width: 190px; }
+#query_main_body .query_main_row .text { width: 180px; }
 #query_main_body .query_main_row .date { width: 70px; }
-#query_main_body .query_main_row .location { width: 100px; }
+#query_main_body .query_main_row .location { width: 90px; }
+#query_main_body .query_main_row .button {
+	width: 20px;
+	color: #CCC;
+	text-align: center;
+	cursor: pointer;
+}
+
+#query_main_body .query_main_row .button:hover {
+	color: #666;
+}
+
+#query_main_body .query_controls_row {
+	width: 500px;
+	height: 30px;
+	border-bottom: 1px solid #EEE;
+	clear: both;
+}
 
 #query_tweets {
 	margin-left: 10px;

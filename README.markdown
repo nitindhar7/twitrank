@@ -43,6 +43,6 @@ Our system is composed of five main components:
 Authors
 -------
 
-1. Nitin Dhar - nitindhar7@yahoo.com
-2. Maggie Neuwald - maggie.neuwald@gmail.com
-3. Quentin Swain - qswain2@gmail.com
+1. Nitin Dhar - nitindhar7[at]yahoo.com
+2. Maggie Neuwald - maggie.neuwald[at]gmail.com
+3. Quentin Swain - qswain2[at]gmail.com

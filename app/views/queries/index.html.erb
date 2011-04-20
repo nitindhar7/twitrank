@@ -33,6 +33,10 @@
 					<div class="cell text"><%= @query.text %></div>
 					<div class="cell date"><%= @query.query_date.strftime("%Y-%m-%d") %></div>
 					<div class="cell location"><%= @query.location %></div>
+					<div class="cell button">▼</div>
+				</div>
+				<div id="query_controls_<%= @query.id %>" class="query_controls_row">
+					<div class="button get_tweets">Get Tweets</div>
 				</div>
 			<% end %>
 		</div>
