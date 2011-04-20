@@ -6,6 +6,12 @@ Overview
 Twitrank is simply a tweet ranking system. Just add events with some details to calibrate Twitrank and it will find tweets for events that
 are searched in ranked in order of relevance.
 
+Twitrank uses open source libraries in its ranking algorithms and to fetch data from Twitter:
+
+1. twitter - http://twitter.rubyforge.org/ by John Nunemaker
+2. geokit - http://geokit.rubyforge.org/ by Andre Lewis and Bill Eisenhauer
+3. sofia-ml - http://code.google.com/p/sofia-ml/
+
 Setup
 -----
 Twitrank is easy to setup. 2 sample configuration files are created:
