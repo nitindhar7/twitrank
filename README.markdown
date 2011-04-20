@@ -10,11 +10,11 @@ Setup
 -----
 Twitrank is easy to setup. 2 sample configuration files are created:
 
-	1.	config/database.example.yml
-		* This is the default database configuration created by rails. Just add in your customer database details.
-	2.	config/initializers/twitter.rb.example
-		* This is the Twitter configuration file where you add your Twitter consumer key/secret and your Twitter OAuth token/secret
-		* Example:
+1.	config/database.example.yml
+	* This is the default database configuration created by rails. Just add in your customer database details.
+2.	config/initializers/twitter.rb.example
+	* This is the Twitter configuration file where you add your Twitter consumer key/secret and your Twitter OAuth token/secret
+	* Example:
 
 
 	Twitter.configure do |config|
