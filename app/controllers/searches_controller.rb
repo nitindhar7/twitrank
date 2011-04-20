@@ -17,4 +17,17 @@ class SearchesController < ApplicationController
       format.js
     end
   end
+  
+  def autocomplete
+    @ac_results = []
+    
+    Search.find(:all, :select => 'DISTINCT query', :conditions => "query LIKE '%#{params[:q]}%'").each do |s|
+      @ac_results << s.query
+    end
+    Query.find(:all, :select => 'DISTINCT text', :conditions => "text LIKE '%#{params[:q]}%'").each do |q|
+      @ac_results << q.text
+    end
+    
+    @ac_results
+  end
 end

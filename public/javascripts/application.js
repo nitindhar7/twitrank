@@ -1,8 +1,6 @@
 $(document).ready(function() {
 	
-	$(window).scroll(function() {
-		//$('#query_tweets_header').css("top", $(window).scrollTop());
-	});
+	$('#query').focus();
 	
 	$("#query_tweets_body .query_tweets_row").live('click', function() {
 		$("#query_tweets_body .query_tweets_row").removeClass("active");
@@ -13,6 +11,12 @@ $(document).ready(function() {
 		$("#query_main_body .query_main_row").removeClass("active");
 		$(this).addClass("active");
 	});
+	
+	$("#query").autocomplete('/searches/autocomplete.js', {
+        max: 11,
+    })
+	
+	//$("#query").autocomplete(data);
 	
 });
 

@@ -2,4 +2,11 @@ module SearchesHelper
   def twitter_request_count
     Twitter::Client.new.rate_limit_status.remaining_hits.to_s + " Twitter API request(s) remaining this hour"
   end
+  
+  def autocomplete_search_queries( ac_results = @ac_results )
+    result = ac_results.map do |ac_result|
+      "#{ac_result}"
+    end
+    result.join("\n")
+  end  
 end
