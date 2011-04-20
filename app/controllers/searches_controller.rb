@@ -9,7 +9,7 @@ class SearchesController < ApplicationController
     
     @query_tweets = []
     @client = Twitter::Client.new
-    Twitter::Search.new.containing( params[:query] ).no_retweets.lang("en").per_page( 100 ).each do |tweet|
+    Twitter::Search.new.containing( params[:query] ).no_retweets.lang("en").per_page( 5 ).each do |tweet|
       @query_tweets << tweet
     end
     
