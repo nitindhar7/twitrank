@@ -15,12 +15,14 @@ Twitrank is easy to setup. 2 sample configuration files are created:
 2.	config/initializers/twitter.rb.example
 	* This is the Twitter configuration file where you add your Twitter consumer key/secret and your Twitter OAuth token/secret
 	* Example:
-		Twitter.configure do |config|
-		  config.consumer_key = YOUR_CONSUMER_KEY
-		  config.consumer_secret = YOUR_CONSUMER_SECRET
-		  config.oauth_token = YOUR_OAUTH_TOKEN
-		  config.oauth_token_secret = YOUR_OAUTH_TOKEN_SECRET
-		end	
+	
+	
+	Twitter.configure do |config|
+	  config.consumer_key = YOUR_CONSUMER_KEY
+	  config.consumer_secret = YOUR_CONSUMER_SECRET
+	  config.oauth_token = YOUR_OAUTH_TOKEN
+	  config.oauth_token_secret = YOUR_OAUTH_TOKEN_SECRET
+	end	
 
 
 
