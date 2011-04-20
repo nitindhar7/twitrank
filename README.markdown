@@ -10,7 +10,7 @@ Twitrank uses open source libraries in its ranking algorithms and to fetch data 
 
 1. twitter - http://twitter.rubyforge.org/ by John Nunemaker
 2. geokit - http://geokit.rubyforge.org/ by Andre Lewis and Bill Eisenhauer
-3. sofia-ml - http://code.google.com/p/sofia-ml/
+3. sofia-ml - http://code.google.com/p/sofia-ml/ by sculleyd@gmail.com, dsculley@google.com and gmann@google.com
 
 Setup
 -----
