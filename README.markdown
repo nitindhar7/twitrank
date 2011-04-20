@@ -17,7 +17,7 @@ Setup
 Twitrank is easy to setup. 2 sample configuration files are created:
 
 1. config/database.example.yml
-	* This is the default database configuration created by rails. Just add in your customer database details.
+	* This is the default database configuration created by rails. Just add in your custom database details.
 2. config/initializers/twitter.rb.example
 	* This is the Twitter configuration file where you add your Twitter consumer key/secret and your Twitter OAuth token/secret
 
@@ -39,3 +39,10 @@ Our system is composed of five main components:
 3. **Judging Phase** Editors judge each tweet to determine whether it is relevant to its associated query. We will create n-tuples each containing ranking signals such as percent query keywords matched, tweet age, user location and retweet count. Given this metadata the editor has judge whether the tweet is relevant to the query. For this experiment, we assume that an editors’ judgment is satisfactorily accurate.
 4. **Optimization and Training** To generalize the process of judging tweets we optimize our n-tuples using sofia-ml, which is a “suite of fast incremental algorithms for machine learning”. sofia-ml can be used to train models for ranking and is highly configurable. We use sofia to generate an optimization function, which we use to train our system iteratively. Once the function outputs satisfactory results we test and evaluate the system
 5. **Test and Evaluate** To test our system, we divide the data set into 5 mutually exclusive segments and run cross-referencing experiments. One segment is assigned to be the training set and we evaluate the other 4 segments. This is repeated until each segment has been assigned to be the training set once.
+
+Authors
+-------
+
+1. Nitin Dhar - nitindhar7@yahoo.com
+2. Maggie Neuwald - maggie.neuwald@gmail.com
+3. Quentin Swain - qswain2@gmail.com

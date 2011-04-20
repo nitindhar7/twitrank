@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: TweetsController</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">TweetsController</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/app/controllers/tweets_controller_rb.html">
+                app/controllers/tweets_controller.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                <a href="ApplicationController.html">
+                ApplicationController
+               </a>
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000005">index</a>&nbsp;&nbsp;
+      <a href="#M000007">signals</a>&nbsp;&nbsp;
+      <a href="#M000006">update</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000005" class="method-detail">
+        <a name="M000005"></a>
+
+        <div class="method-heading">
+          <a href="#M000005" class="method-signature">
+          <span class="method-name">index</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000005-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000005-source">
+<pre>
+   <span class="ruby-comment cmt"># File app/controllers/tweets_controller.rb, line 2</span>
+2:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">index</span>
+3:     <span class="ruby-ivar">@tweets</span> = <span class="ruby-constant">Tweet</span>.<span class="ruby-identifier">all</span>
+4:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000007" class="method-detail">
+        <a name="M000007"></a>
+
+        <div class="method-heading">
+          <a href="#M000007" class="method-signature">
+          <span class="method-name">signals</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000007-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000007-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/controllers/tweets_controller.rb, line 11</span>
+11:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">signals</span>
+12:     <span class="ruby-ivar">@tweet</span> = <span class="ruby-constant">Tweet</span>.<span class="ruby-identifier">find_by_id</span>( <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:id</span>] )
+13:     <span class="ruby-ivar">@tweet_words</span> = <span class="ruby-ivar">@tweet</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">split</span>( <span class="ruby-value str">' '</span> )
+14:     <span class="ruby-ivar">@query_words</span> = <span class="ruby-ivar">@tweet</span>.<span class="ruby-identifier">query</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">split</span>( <span class="ruby-value str">' '</span> )
+15:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000006" class="method-detail">
+        <a name="M000006"></a>
+
+        <div class="method-heading">
+          <a href="#M000006" class="method-signature">
+          <span class="method-name">update</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000006-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000006-source">
+<pre>
+   <span class="ruby-comment cmt"># File app/controllers/tweets_controller.rb, line 6</span>
+6:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">update</span>
+7:     <span class="ruby-ivar">@tweet</span> = <span class="ruby-constant">Tweet</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-identifier">:id</span>])    
+8:     <span class="ruby-ivar">@tweet</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-identifier">params</span>[<span class="ruby-identifier">:tweet</span>])
+9:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>
