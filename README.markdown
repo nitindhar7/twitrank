@@ -57,20 +57,20 @@ Some assumptions that the system makes:
 
 Relevance assignment (0 - 3):
 
-0 **No relevance**
+0. **No relevance**
 	* All information is topically irrelevant to the event.
 	* The text and links are completely unrelated to the event
 	* There is no information given about the event and any opinions are unrelated to the event itself
 	* Keywords are present but are not about the event or the text is about something else topically
-1 **Somewhat relevant**
+1. **Somewhat relevant**
 	* There is some topically irrelevant information present, but there is also some relevant information.
 	* Either the text or link is unrelated to the event or uninformative.
 	* Keywords may match but no relevant information is given – the tweet does not provide much information about the event and any opinions do not contain information about the event.
-2 **Mostly relevant**
+2. **Mostly relevant**
 	* Although some information may not be correct or may be pure opinion, there is still mostly topically relevant information about the event.
 	* Perhaps the link is incorrect or the text is mostly opinion, but the tweet is mostly about the event
 	* Keywords match and the tweet is topically relevant, or the link is relevant although there is not as much relevant text.
-3 **Highly relevant**
+3. **Highly relevant**
 	* All information present is correct and relevant.
 	* The text and links are completely related to the event and new or interesting information is given.
 
