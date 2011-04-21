@@ -41,7 +41,7 @@ tweet.rb:
 
 Architecture
 ------------
-Our system is composed of five main components:
+### Our system is composed of five main components:
 
 1. **Creating event queries** Manually build 50 queries to use as input to the next component.
 2. **Querying Twitter** Using the queries selected manually in the previous step we interface with the Twitter API and retrieve tweets returned by searching each query. Each tweet will contain the tweet body as well as metadata associated with it including a timestamp, retweet count and location. We will use some of this metadata as ranking signals in the following steps.
@@ -49,13 +49,13 @@ Our system is composed of five main components:
 4. **Optimization and Training** To generalize the process of judging tweets we optimize our n-tuples using sofia-ml, which is a “suite of fast incremental algorithms for machine learning”. sofia-ml can be used to train models for ranking and is highly configurable. We use sofia to generate an optimization function, which we use to train our system iteratively. Once the function outputs satisfactory results we test and evaluate the system
 5. **Test and Evaluate** To test our system, we divide the data set into 5 mutually exclusive segments and run cross-referencing experiments. One segment is assigned to be the training set and we evaluate the other 4 segments. This is repeated until each segment has been assigned to be the training set once.
 
-Some assumptions that the system makes:
+### Some assumptions that the system makes:
 
 1. Users are interested in information about an event. They are only interested in opinions that include relevant information about an event.
 2. They are interested in both text and links within tweets. A tweet is of some value even if its either its text or a link in it is subpar. Although it may not be as valuable as a tweet whose text and link, both, are relevant.
 3. “Relevant” means that it includes facts about the event itself and is topically relevant to the event.
 
-Relevance assignment (0 - 3):
+### Relevance assignment (0 - 3):
 
 0. **No relevance**
 	* All information is topically irrelevant to the event.
