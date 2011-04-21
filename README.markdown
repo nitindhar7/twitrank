@@ -50,11 +50,13 @@ Our system is composed of five main components:
 5. **Test and Evaluate** To test our system, we divide the data set into 5 mutually exclusive segments and run cross-referencing experiments. One segment is assigned to be the training set and we evaluate the other 4 segments. This is repeated until each segment has been assigned to be the training set once.
 
 Some assumptions that the system makes:
+
 1. Users are interested in information about an event. They are only interested in opinions that include relevant information about an event.
 2. They are interested in both text and links within tweets. A tweet is of some value even if its either its text or a link in it is subpar. Although it may not be as valuable as a tweet whose text and link, both, are relevant.
 3. “Relevant” means that it includes facts about the event itself and is topically relevant to the event.
 
 Relevance assignment (0 - 3):
+
 0 **No relevance**
 	* All information is topically irrelevant to the event.
 	* The text and links are completely unrelated to the event
