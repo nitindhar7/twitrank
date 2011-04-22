@@ -1,4 +1,5 @@
 class QueriesController < ApplicationController
+  before_filter :auth_login
   before_filter :load_queries, :only => [:index, :create]
   
   def index

@@ -1,4 +1,6 @@
 class TweetsController < ApplicationController
+  before_filter :auth_login
+  
   include Geokit::Geocoders
   
   def index

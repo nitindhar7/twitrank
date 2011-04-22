@@ -1,0 +1,27 @@
+<div id="logo">
+	<div class="twit">Twit</div>
+	<div class="rank">Rank</div>
+</div>
+<div id="authentication">
+	<div id="login">
+		<div class="title">Member Login</div>
+		<% form_tag sessions_path do %>
+			<%= label_tag :email %>
+			<%= text_field_tag :email, params[:email], :class => "field" %>
+			<%= label_tag :password %>
+			<%= password_field_tag :password, nil, :class => "field" %>
+			<%= submit_tag "Login", :class => "button" %>
+		<% end %>
+	</div>
+	<div id="signup">
+		<div class="title">Sign Up Today</div>
+		<div class="body">Twitrank is simply a tweet re-ranking system. Just add events to calibrate and find tweets by relevance.</div>
+		<%= link_to_remote "Create Account", :url => new_user_path, :method => :get, :update => { :success => "cart", :failure => "error" }, :html => { :class => "button" } %>
+	</div>
+</div>
+<div id="errors">
+	<%= flash[:error] %>
+</div>
+<div id="notice">
+	<%= flash[:notice] %>
+</div>

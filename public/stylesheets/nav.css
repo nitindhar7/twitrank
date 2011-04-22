@@ -21,6 +21,7 @@
 }
 
 #logo .twit {
+	position: relative;
 	height: 75px;
 	line-height: 75px;
 	font-size: 40px;
@@ -30,10 +31,57 @@
 }
 
 #logo .rank {
+	position: relative;
 	height: 75px;
 	line-height: 75px;
 	font-size: 40px;
 	font-weight: bold;
 	color: #3B5998;
 	float: left;
+}
+
+#controls {
+	width: 550px;
+	height: 75px;
+	float: left;
+}
+
+#welcome {
+	margin-top: 5px;
+	width: 550px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 12px;
+	text-align: right;
+}
+
+#session {
+	padding: 0 10px;
+	height: 35px;
+	clear: both;
+	float: right;
+	z-index: -1;
+	background: #3B5998;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 0 300px #000;
+	-webkit-box-shadow: 0 0 300px #000;
+}
+
+#session a {
+	position: relative;
+	margin-top: 5px;
+	padding: 0 10px;
+	height: 25px;
+	line-height: 25px;
+	float: right;
+	display: block;
+	text-decoration: none;
+	color: #FFF;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+#session a:hover {
+	background: #4F6AA2;
 }

@@ -1,0 +1,22 @@
+<div class="title">Sign Up Today</div>
+<% form_for @user do |f| %>
+	<%= f.label :first_name %>
+	<%= f.text_field :first_name, :class => "field" %>
+	<%= f.label :last_name %>
+	<%= f.text_field :last_name, :class => "field" %>
+	<%= f.label :twitter_consumer_key %>
+	<%= f.text_field :twitter_consumer_key, :class => "field" %>
+	<%= f.label :twitter_consumer_secret %>
+	<%= f.text_field :twitter_consumer_secret, :class => "field" %>
+	<%= f.label :twitter_oauth_token %>
+	<%= f.text_field :twitter_oauth_token, :class => "field" %>
+	<%= f.label :twitter_oauth_secret %>
+	<%= f.text_field :twitter_oauth_secret, :class => "field" %>
+	<%= f.label :email %>
+	<%= f.text_field :email, :class => "field" %>
+	<%= f.label :password %>
+	<%= f.password_field :password, :class => "field" %>
+	<%= f.label :password_confirmation %>
+	<%= f.password_field :password_confirmation, :class => "field" %>
+	<%= f.submit "Sign Up", :class => "submit" %>
+<% end %>

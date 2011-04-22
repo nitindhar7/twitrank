@@ -4,6 +4,11 @@
 		<div class="rank">Rank</div>
 	</div>
 	<div id="controls">
-		
+		<% if current_user %>
+			<div id="welcome">Welcome, <%= current_user.full_name %></div>
+			<div id="session">
+				<%= link_to "Log Out", log_out_path %>
+			</div>
+		<% end %>
 	</div>
 </div>

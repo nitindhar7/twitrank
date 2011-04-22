@@ -348,3 +348,15 @@ body {
 	line-height: 30px;
 	cursor: pointer;
 }
+
+#notice {
+	margin: auto;
+	margin-bottom: 10px;
+	width: 1100px;
+	line-height: 40px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	background: #CCFFCC;
+	color: #339966;
+}

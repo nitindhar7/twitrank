@@ -1,0 +1,216 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 11px;
+	font-family: "Trebuchet MS" Helvetica Tahoma;
+	outline: none;
+}
+
+body {
+	background: url(/images/main_bg.jpg) no-repeat #F5F5F5;
+}
+
+#logo {
+	margin: auto;
+	margin-top: 12%;
+	width: 1100px;
+	height: 150px;
+	text-shadow: 0 4px 3px #333;
+	clear: both;
+}
+
+#logo .twit {
+	position: relative;
+	width: 500px;
+	height: 150px;
+	line-height: 150px;
+	font-size: 90px;
+	font-style: italic;
+	text-align: right;
+	color: #666;
+	float: left;
+}
+
+#logo .rank {
+	position: relative;
+	width: 600px;
+	height: 150px;
+	line-height: 150px;
+	font-size: 90px;
+	font-weight: bold;
+	text-align: left;
+	color: #3B5998;
+	float: left;
+}
+
+#authentication {
+	margin: auto;
+	padding: 20px;
+	width: 560px;
+	height: 180px;
+	background: #000;
+	opacity: 0.8;
+	clear: both;
+	border: 1px solid #000;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 0 300px #000;
+	-webkit-box-shadow: 0 0 300px #000;
+}
+
+#login {
+	position: relative;
+	padding: 20px;
+	width: 230px;
+	height: 140px;
+	background: #111;
+	float: left;
+	cursor: pointer;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 0 5px #000;
+	-webkit-box-shadow: 0 0 5px #000;
+}
+
+#login .title {
+	width: 230px;
+	height: 25px;
+	line-height: 25px;
+	color: #FFF;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#login form {
+	width: 230px;
+	height: 125px;
+}
+
+#login form label {
+	width: 230px;
+	height: 20px;
+	line-height: 20px;
+	color: #CCC;
+	font-size: 12px;
+	display: block;
+}
+
+#login form .field {
+	margin-bottom: 10px;
+	padding: 1px 0;
+	width: 228px;
+	height: 16px;
+	line-height: 16px;
+	font-size: 16px;
+	border: 1px solid #CCC;
+}
+
+#login form .button {
+	width: 48px;
+	height: 18px;
+	line-height: 18px;
+	font-size: 12px;
+	cursor: pointer;
+	border: 1px solid #CCC;
+}
+
+#signup {
+	position: relative;
+	margin-left: 20px;
+	padding: 20px;
+	width: 230px;
+	height: 140px;
+	background: #111;
+	cursor: pointer;
+	float: left;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+#signup .title {
+	width: 230px;
+	height: 25px;
+	line-height: 25px;
+	color: #FFF;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#signup .body {
+	width: 230px;
+	height: 75px;
+	line-height: 16px;
+	font-size: 12px;
+	color: #CCC;
+}
+
+#signup .button {
+	width: 230px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	color: #FFF;
+	background: #3B5998;
+	display: block;
+	text-decoration: none;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+#signup .button:hover {
+	text-shadow: 0 2px 1px #333;
+	background: #768BB7;
+}
+
+#errors {
+	margin: auto;
+	width: 560px;
+	line-height: 40px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	color: #FF0000;
+}
+
+#notice {
+	margin: auto;
+	width: 560px;
+	line-height: 40px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	color: #3B5998;
+}
+
+#signup form {
+	width: 230px;
+	height: 125px;
+}
+
+#signup form label {
+	width: 230px;
+	height: 20px;
+	line-height: 20px;
+	color: #CCC;
+	font-size: 12px;
+	display: block;
+}
+
+#signup form .field {
+	margin-bottom: 10px;
+	padding: 1px 0;
+	width: 228px;
+	height: 16px;
+	line-height: 16px;
+	font-size: 16px;
+	border: 1px solid #CCC;
+}
+
+#signup form .submit {
+	height: 18px;
+	line-height: 18px;
+	font-size: 12px;
+	cursor: pointer;
+}

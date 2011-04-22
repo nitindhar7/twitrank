@@ -1,0 +1,2 @@
+page.call( "expandSignup" )
+page.replace_html( "signup", :partial => "form", :locals => { :user => @user } )
