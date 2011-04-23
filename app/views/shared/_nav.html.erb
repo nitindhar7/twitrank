@@ -8,7 +8,9 @@
 			<div id="welcome">Welcome, <%= current_user.full_name %></div>
 			<div id="session">
 				<%= link_to "Log Out", log_out_path %>
-				<%= link_to_remote "Account", :url => edit_user_path( current_user ), :method => :get %>
+				<%= link_to_remote "Account", :url => edit_user_path( current_user ), :method => :get, :html => { :id => "nav_tab_account" } %>
+				<%= link_to "Queries", queries_path %>
+				<%= link_to_remote "Tweet Requests", :url => requests_path, :method => :get, :html => { :id => "nav_tab_requests" } %>
 			</div>
 		<% end %>
 	</div>

@@ -1,6 +1,6 @@
 class TweetsController < ApplicationController
   before_filter :auth_login
-  before_filter :twitter_config, :only => [:fetch]
+  before_filter :twitter_config, :only => [:fetch, :requests]
   
   include Geokit::Geocoders
   
@@ -16,11 +16,22 @@ class TweetsController < ApplicationController
   def fetch
     @query = Query.find(params[:id])
     fetch_tweets(@query)
-    
     render :partial => "fetch"
   end
   
+  def requests
+    flash[:notice] = twitter_request_count
+    
+    respond_to do |format|
+      format.js
+    end
+  end
+  
   protected
+  
+  def twitter_request_count
+    Twitter::Client.new.rate_limit_status.remaining_hits.to_s + " Twitter API request(s) remaining this hour"
+  end
   
   def fetch_tweets(query)
     Twitter::Search.new.containing( query.text ).no_retweets.geocode( query.latitude, query.longitude, "1000mi" ).lang("en").per_page( Tweet.per_page ).each do |tweet|

@@ -1,0 +1,1 @@
+page.insert_html :top, 'notice', :text => twitter_request_count

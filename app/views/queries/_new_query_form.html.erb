@@ -1,0 +1,13 @@
+<% form_remote_tag(:url => {:action => :create}, :method => "post", :html => {:id => "new_query_form"}) do %>
+	<%= label_tag(:text, "Text") %>
+	<%= text_field_tag(:text, nil, :class => "field", :autocomplete => "off") %>
+	<%= label_tag(:query_date, "Event Date") %>
+	<%= text_field_tag(:query_date, nil, :class => "field", :autocomplete => "off") %>
+	<%= label_tag(:location, "Location") %>
+	<%= text_field_tag(:location, nil, :class => "field", :autocomplete => "off") %>
+	<%= label_tag(:latitude, "Latitude") %>
+	<%= text_field_tag(:latitude, nil, :class => "field", :autocomplete => "off") %>
+	<%= label_tag(:longitude, "Longitude") %>
+	<%= text_field_tag(:longitude, nil, :class => "field", :autocomplete => "off") %>
+	<%= submit_tag("Create", :class => "button") %>
+<% end %>

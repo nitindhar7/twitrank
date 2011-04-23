@@ -43,3 +43,12 @@
 	background: #555;
 	cursor: pointer;
 }
+
+.ac_results {
+	width: 1038px !important;
+}
+
+.ac_results ul li {
+	height: 30px !important;
+	line-height: 30px !important;
+}

@@ -16,8 +16,9 @@ $(document).ready(function() {
         max: 11,
     })
 	
-	//$("#query").autocomplete(data);
-	
+	$("#notice").live('click', function() {
+		$("#notice").text('');
+	});
 });
 
 function toggleNewQueryForm()
@@ -47,4 +48,9 @@ function hideElement(selector)
 function showElement(selector)
 {
 	$('#' + selector).slideToggle('fast');
+}
+
+function addCustomClass(selector, customClass)
+{
+	$('#' + selector).addClass(customClass);
 }

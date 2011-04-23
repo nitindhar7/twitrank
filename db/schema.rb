@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110421183125) do
+ActiveRecord::Schema.define(:version => 20110425230002) do
 
   create_table "queries", :force => true do |t|
     t.string   "text",       :limit => 140
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20110421183125) do
     t.string   "location",   :limit => 100
     t.integer  "latitude"
     t.integer  "longitude"
+    t.integer  "status",                    :default => 0, :null => false
   end
 
   create_table "searches", :force => true do |t|
@@ -44,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20110421183125) do
     t.integer  "distance"
     t.integer  "time_difference"
     t.integer  "relevance",                           :default => 0
+    t.integer  "status",                              :default => 0, :null => false
   end
 
   create_table "users", :force => true do |t|

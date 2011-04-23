@@ -26,6 +26,13 @@ class QueriesController < ApplicationController
     respond_to do |format|
       format.js
     end
+  end 
+  
+  def finish
+    @query = Query.find( params[:id] )
+    @query.status = 1
+    @query.save
+    render :partial => "finish"
   end
   
   private

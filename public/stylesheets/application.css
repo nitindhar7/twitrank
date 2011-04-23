@@ -137,6 +137,18 @@ body {
 	text-align: center;
 	cursor: pointer;
 }
+#query_main_body .query_main_row .status {
+	padding: 0;
+	width: 3px;
+	float: right;
+	cursor: pointer;
+}
+#query_main_body .query_main_row .unfinished {
+	background: #C00;
+}
+#query_main_body .query_main_row .finished {
+	background: #99FF99;
+}
 
 #query_main_body .query_main_row .button:hover {
 	color: #666;
@@ -148,6 +160,8 @@ body {
 	border-bottom: 1px solid #EEE;
 	display: none;
 	clear: both;
+	-moz-box-shadow: inset 0 3px 5px #555;
+	-webkit-box-shadow: inset 0 3px 5px #555;
 }
 
 #query_main_body .query_controls_row .button {
@@ -251,6 +265,10 @@ body {
 
 #query_tweets_body .query_tweets_row:hover {
 	background: #FFFFCC;
+}
+
+#query_tweets_body .finished {
+	background: #CFC;
 }
 
 #query_tweets_body .active {
@@ -357,6 +375,8 @@ body {
 	font-size: 16px;
 	font-weight: bold;
 	text-align: center;
+	cursor: pointer;
+	clear: both;
 }
 
 #notice {
@@ -367,4 +387,9 @@ body {
 #error {
 	background: #FFE6E6;
 	color: #CC0000;
+}
+
+#error:hover , #notice:hover  {
+	-moz-box-shadow: 0 0 15px #999;
+	-webkit-box-shadow: 0 0 15px #999;
 }

@@ -10,25 +10,16 @@
 <div id="queries">
 	<div id="query_main">
 		<h1 id="query_main_title">Event Queries (<%= @queries.length %>)<div id="new_query_button" onclick="toggleNewQueryForm()">Add an Event +</div></h1>
-		<% form_remote_tag(:url => {:action => :create}, :method => "post", :html => {:id => "new_query_form"}) do %>
-			<%= label_tag(:text, "Text") %>
-			<%= text_field_tag(:text, nil, :class => "field", :autocomplete => "off") %>
-			<%= label_tag(:query_date, "Event Date") %>
-			<%= text_field_tag(:query_date, nil, :class => "field", :autocomplete => "off") %>
-			<%= label_tag(:location, "Location") %>
-			<%= text_field_tag(:location, nil, :class => "field", :autocomplete => "off") %>
-			<%= label_tag(:latitude, "Latitude") %>
-			<%= text_field_tag(:latitude, nil, :class => "field", :autocomplete => "off") %>
-			<%= label_tag(:longitude, "Longitude") %>
-			<%= text_field_tag(:longitude, nil, :class => "field", :autocomplete => "off") %>
-			<%= submit_tag("Create", :class => "button") %>
-		<% end %>
+		
+		<%= render :partial => "new_query_form" %>
+		
 		<div id="query_main_header">
 			<div class="header tweets"></div>
 			<div class="header text">Text</div>
 			<div class="header date">Date</div>
 			<div class="header location">Location</div>
 		</div>
+		
 		<div id="query_main_body">
 			<% for @query in @queries %>
 				<div id="query_<%= @query.id %>" class="query_main_row">
@@ -41,9 +32,15 @@
 					<div class="cell date"><%= @query.query_date.strftime("%Y-%m-%d") %></div>
 					<div class="cell location"><%= @query.location %></div>
 					<div class="cell button" onclick="toggleQueryControls('query_<%= @query.id %> .button', 'query_controls_<%= @query.id %>')">▼</div>
+					<% if @query.status == 0 %>
+						<div class="cell status unfinished" id="query_status_<%= @query.id %>" title="Unfinished"></div>
+					<% else %>
+						<div class="cell status finished" id="query_status_<%= @query.id %>" title="Finished"></div>
+					<% end %>
 				</div>
 				<div id="query_controls_<%= @query.id %>" class="query_controls_row">
 					<%= link_to_remote "Get Tweets", :url => fetch_tweet_path( @query.id ), :method => :get, :update => "query_tweets_count_#{@query.id}", :html => { :class => "button get_tweets" }, :complete => "hideElement('query_controls_#{@query.id}')", :loading => "showElement('query_controls_#{@query.id} .spinner')" %>
+					<%= link_to_remote "Finish Query", :url => finish_query_path( @query.id ), :method => :get, :update => "query_status_#{@query.id}", :html => { :class => "button finish" }, :complete => "hideElement('query_controls_#{@query.id}')", :loading => "showElement('query_controls_#{@query.id} .spinner')" %>
 					<div class="spinner"></div>
 				</div>
 			<% end %>
