@@ -64,8 +64,8 @@
 	background: #3B5998;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-	-moz-box-shadow: 0 0 300px #000;
-	-webkit-box-shadow: 0 0 300px #000;
+	-moz-box-shadow: 0 0 30px #999;
+	-webkit-box-shadow: 0 0 30px #999;
 }
 
 #session a {

@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	$("#login form .field:first").focus();
+	
 	$("#login").live({
 		mouseenter:
 			function() {
@@ -20,8 +22,6 @@ $(document).ready(function() {
 				$(this).animate({ backgroundColor: '#111' }, 500, function() {});
 			}
 	});
-	
-	$("#login form .field:first").focus();
 });
 
 function expandSignup()

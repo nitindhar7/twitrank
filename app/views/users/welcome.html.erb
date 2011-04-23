@@ -16,7 +16,7 @@
 	<div id="signup">
 		<div class="title">Sign Up Today</div>
 		<div class="body">Twitrank is simply a tweet re-ranking system. Just add events to calibrate and find tweets by relevance.</div>
-		<%= link_to_remote "Create Account", :url => new_user_path, :method => :get, :update => { :success => "cart", :failure => "error" }, :html => { :class => "button" } %>
+		<%= link_to_remote "Create Account", :url => new_user_path, :method => :get, :html => { :class => "button" } %>
 	</div>
 </div>
 <div id="errors">

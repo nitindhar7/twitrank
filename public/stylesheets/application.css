@@ -7,7 +7,7 @@
 }
 
 body {
-	background: #F5F5F5;
+	background: url(/images/queries_bg.jpg) #F5F5F5;
 }
 
 #queries {
@@ -349,7 +349,7 @@ body {
 	cursor: pointer;
 }
 
-#notice {
+#error, #notice {
 	margin: auto;
 	margin-bottom: 10px;
 	width: 1100px;
@@ -357,6 +357,14 @@ body {
 	font-size: 16px;
 	font-weight: bold;
 	text-align: center;
+}
+
+#notice {
 	background: #CCFFCC;
 	color: #339966;
+}
+
+#error {
+	background: #FFE6E6;
+	color: #CC0000;
 }
