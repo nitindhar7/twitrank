@@ -3,7 +3,7 @@
 
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
-  helper_method :current_user, :auth_login
+  helper_method :current_user, :auth_login, :twitter_config
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
   
   private
@@ -16,6 +16,15 @@ class ApplicationController < ActionController::Base
     unless current_user
       flash[:error] = "Please Login or Signup"
       redirect_to root_url
+    end
+  end
+  
+  def twitter_config
+    Twitter.configure do |config|
+      config.consumer_key = current_user.twitter_consumer_key
+      config.consumer_secret = current_user.twitter_consumer_secret
+      config.oauth_token = current_user.twitter_oauth_token
+      config.oauth_token_secret = current_user.twitter_oauth_secret
     end
   end
 end

@@ -2,6 +2,7 @@ require 'twitter'
 
 class SearchesController < ApplicationController
   before_filter :auth_login
+  before_filter :twitter_config, :only => [:index]
   
   def index
     redirect_to(root_url) && return if params[:query].blank?

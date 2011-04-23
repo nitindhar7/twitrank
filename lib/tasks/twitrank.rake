@@ -70,3 +70,9 @@ task :load_queries => :environment do
     Query.create( :text => query[0], :query_date => query[1], :location => query[2], :latitude => query[3], :longitude => query[4] )
   end
 end
+
+desc "show request remaining this hour"
+task :requests_remaining => :environment do
+  @client = Twitter::Client.new
+  puts @client.rate_limit_status.remaining_hits.to_s + " Twitter API request(s) remaining this hour"
+end

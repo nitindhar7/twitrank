@@ -1,5 +1,6 @@
 class TweetsController < ApplicationController
   before_filter :auth_login
+  before_filter :twitter_config, :only => [:fetch]
   
   include Geokit::Geocoders
   
