@@ -1,6 +1,6 @@
 <div id="query_<%= @query.id %>" class="query_main_row">
 	<div class="cell tweets">
-		<% form_remote_tag :url => { :action => "query_tweets", :id => @query } do %>
+		<% form_remote_tag :url => { :action => "query_tweets", :id => @query }, :html => { :id => "query_tweets_count_#{@query.id}" } do %>
 			<%= submit_tag "(#{@query.tweets.count}) Tweets" %>
 		<% end %>
 	</div>
@@ -8,5 +8,10 @@
 	<div class="cell date"><%= @query.query_date.strftime("%Y-%m-%d") %></div>
 	<div class="cell location"><%= @query.location %></div>
 	<div class="cell button" onclick="toggleQueryControls('query_<%= @query.id %> .button', 'query_controls_<%= @query.id %>')">▼</div>
+	<% if @query.status == 0 %>
+		<div class="cell status unfinished" id="query_status_<%= @query.id %>" title="Unfinished"></div>
+	<% else %>
+		<div class="cell status finished" id="query_status_<%= @query.id %>" title="Finished"></div>
+	<% end %>
 	<div class="cell status"></div>
 </div>

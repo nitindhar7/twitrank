@@ -12,7 +12,8 @@ class QueriesController < ApplicationController
       :query_date => params[:query_date],
       :location => params[:location],
       :latitude => params[:latitude],
-      :longitude => params[:longitude]
+      :longitude => params[:longitude],
+      :status => params[:status]
     })
     @query.save
     
