@@ -1,11 +1,121 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+q1:
+    text: 'Hello'
+    query_date: '2011-04-25'
+    location: 'US'
+    latitude: 1
+    longitude: 2
+    status: 1
 
-# This model initially had no columns defined.  If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+q2:
+    query_date: '2011-04-25'
+    location: 'US'
+    latitude: 1
+    longitude: 2
+    status: 1
+
+q3:
+    text: 'hello'
+    location: 'US'
+    latitude: 1
+    longitude: 2
+    status: 1
+
+q4:
+    text: 'hello'
+    query_date: '2011-04-25'
+    latitude: 1
+    longitude: 2
+    status: 1
+
+q5:
+    text: 'Hello'
+    query_date: '2011-04-25'
+    location: 'US'
+    longitude: 2
+    status: 1
+
+q6:
+    text: 'Hello'
+    query_date: '2011-04-25'
+    location: 'US'
+    latitude: 1
+    status: 1
+
+q7:
+    text: 'Hello'
+    query_date: '2011-04-25'
+    location: 'US'
+    latitude: 1
+    longitude: 2
+    
+q8:
+    text: ''
+    query_date: '2011-04-25'
+    location: 'US'
+    latitude: 1
+    longitude: 2
+    status: 1
+
+q9:
+    text: 'lalalalalalalalalalalalalalalalalalalalalalaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaalalalalalalalalalalalalalalalalalalalalalalaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaalalalalalalalalalalalalalalalalalalalalalalaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaalalalalalalalalalalalalalalalalalalalalalalaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaalalalalalalalalalalalalalalalalalalalalalalaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+    query_date: '2011-04-25'
+    location: 'US'
+    latitude: 1
+    longitude: 2
+    status: 1
+
+q10:
+    text: 'Hi'
+    query_date: '20111/04/25'
+    location: 'US'
+    latitude: 1
+    longitude: 2
+    status: 1
+
+q11:
+    text: 'Hi'
+    query_date: '04--25-2011'
+    location: 'US'
+    latitude: 1
+    longitude: 2
+    status: 1
+
+q12:
+    text: 'Hi'
+    query_date: '2011-04-25'
+    location: 'USUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUSUS'
+    latitude: 1
+    longitude: 2
+    status: 1
+
+q13:
+    text: 'Hi'
+    query_date: '2011-04-25'
+    location: ''
+    latitude: 1
+    longitude: 2
+    status: 1
+    
+q14:
+    text: 'Hi'
+    query_date: '2011-04-25'
+    location: 'US'
+    latitude: 'a'
+    longitude: 2
+    status: 1
+    
+q15:
+    text: 'Hi'
+    query_date: '2011-04-25'
+    location: 'US'
+    latitude: 1
+    longitude: 'a'
+    status: 1
+    
+q16:
+    text: 'Hi'
+    query_date: '2011-04-25'
+    location: 'US'
+    latitude: 1
+    longitude: 2
+    status: 'a'

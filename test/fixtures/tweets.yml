@@ -1,11 +1,194 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+t1:
+    text: 'hi'
+    user: 'joe'
+    retweets: 0
+    tweet_created_at: '2011-04-26'
+    location: 'NY'
+    query_id: 1
+    user_followers_count: 0
+    user_friends_count: 0
+    user_statuses_count: 0
+    user_favorites_count: 0
+    percent_keywords: 50
+    distance: 50
+    time_difference: 50
+    relevance: 1
+    status: 1
 
-# This model initially had no columns defined.  If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+t2:
+    text: 'hi'
+    user: 'joe'
+    retweets: 0
+    tweet_created_at: '2011-04-26'
+    query_id: 1
+    user_followers_count: 0
+    user_friends_count: 0
+    user_statuses_count: 0
+    user_favorites_count: 0
+    percent_keywords: 50
+    distance: 50
+    time_difference: 50
+    relevance: 1
+    status: 1
+
+t3:
+    user: 'joe'
+    retweets: 0
+    tweet_created_at: '2011-04-26'
+    location: 'NY'
+    query_id: 1
+    user_followers_count: 0
+    user_friends_count: 0
+    user_statuses_count: 0
+    user_favorites_count: 0
+    percent_keywords: 50
+    distance: 50
+    time_difference: 50
+    relevance: 1
+    status: 1
+    
+t4:
+    text: 'hi'
+    retweets: 0
+    tweet_created_at: '2011-04-26'
+    location: 'NY'
+    query_id: 1
+    user_followers_count: 0
+    user_friends_count: 0
+    user_statuses_count: 0
+    user_favorites_count: 0
+    percent_keywords: 50
+    distance: 50
+    time_difference: 50
+    relevance: 1
+    status: 1
+    
+t5:
+    text: 'hi'
+    user: 'joe'
+    tweet_created_at: '2011-04-26'
+    location: 'NY'
+    query_id: 1
+    user_followers_count: 0
+    user_friends_count: 0
+    user_statuses_count: 0
+    user_favorites_count: 0
+    percent_keywords: 50
+    distance: 50
+    time_difference: 50
+    relevance: 1
+    status: 1
+    
+t6:
+    text: 'hi'
+    user: 'joe'
+    retweets: 0
+    location: 'NY'
+    query_id: 1
+    user_followers_count: 0
+    user_friends_count: 0
+    user_statuses_count: 0
+    user_favorites_count: 0
+    percent_keywords: 50
+    distance: 50
+    time_difference: 50
+    relevance: 1
+    status: 1
+    
+t7:
+    text: 'hi'
+    user: 'joe'
+    retweets: 0
+    tweet_created_at: '2011-04-26'
+    location: 'NY'
+    user_followers_count: 0
+    user_friends_count: 0
+    user_statuses_count: 0
+    user_favorites_count: 0
+    percent_keywords: 50
+    distance: 50
+    time_difference: 50
+    relevance: 1
+    status: 1
+    
+t12:
+    text: 'hi'
+    user: 'joe'
+    retweets: 0
+    tweet_created_at: '2011-04-26'
+    location: 'NY'
+    query_id: 1
+    user_followers_count: 0
+    user_friends_count: 0
+    user_statuses_count: 0
+    user_favorites_count: 0
+    distance: 50
+    time_difference: 50
+    relevance: 1
+    status: 1
+    
+t13:
+    text: 'hi'
+    user: 'joe'
+    retweets: 0
+    tweet_created_at: '2011-04-26'
+    location: 'NY'
+    query_id: 1
+    user_followers_count: 0
+    user_friends_count: 0
+    user_statuses_count: 0
+    user_favorites_count: 0
+    percent_keywords: 50
+    time_difference: 50
+    relevance: 1
+    status: 1
+    
+t14:
+    text: 'hi'
+    user: 'joe'
+    retweets: 0
+    tweet_created_at: '2011-04-26'
+    location: 'NY'
+    query_id: 1
+    user_followers_count: 0
+    user_friends_count: 0
+    user_statuses_count: 0
+    user_favorites_count: 0
+    percent_keywords: 50
+    distance: 50
+    relevance: 1
+    status: 1
+    
+t16:
+    text: 'hihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihi'
+    user: 'joe'
+    retweets: 0
+    tweet_created_at: '2011-04-26'
+    location: 'NY'
+    query_id: 1
+    user_followers_count: 0
+    user_friends_count: 0
+    user_statuses_count: 0
+    user_favorites_count: 0
+    percent_keywords: 50
+    distance: 50
+    time_difference: 50
+    relevance: 1
+    status: 1
+    
+t17:
+    text: 'hi'
+    user: 'joejoejoejoejoejoejoejoejoejoejoejoejoejoejoejoejoejoejoejoejoejoejoejoejoejoejoejoejoejoejoejoejoejoejoejoejoejoejoejoejoe'
+    retweets: 0
+    tweet_created_at: '2011-04-26'
+    location: 'NY'
+    query_id: 1
+    user_followers_count: 0
+    user_friends_count: 0
+    user_statuses_count: 0
+    user_favorites_count: 0
+    percent_keywords: 50
+    distance: 50
+    time_difference: 50
+    relevance: 1
+    status: 1

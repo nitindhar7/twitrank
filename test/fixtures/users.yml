@@ -1,11 +1,155 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-one:
-  email: MyString
-  password_hash: MyString
-  password_salt: MyString
-
-two:
-  email: MyString
-  password_hash: MyString
-  password_salt: MyString
+u1:
+    email: 'jdoe@example.com'
+    password_hash: 'abcd'
+    password_salt: 'xyz'
+    first_name: 'Joe'
+    last_name: 'Smith'
+    twitter_consumer_key: 'asd'
+    twitter_consumer_secret: 'asd'
+    twitter_oauth_token: 'asd'
+    twitter_oauth_secret: 'asd'
+    
+u2:
+    password_hash: 'abcd'
+    password_salt: 'xyz'
+    first_name: 'Joe'
+    last_name: 'Smith'
+    twitter_consumer_key: 'asd'
+    twitter_consumer_secret: 'asd'
+    twitter_oauth_token: 'asd'
+    twitter_oauth_secret: 'asd'
+    
+u3:
+    email: 'jdoe1@example.com'
+    password_salt: 'xyz'
+    first_name: 'Joe'
+    last_name: 'Smith'
+    twitter_consumer_key: 'asd'
+    twitter_consumer_secret: 'asd'
+    twitter_oauth_token: 'asd'
+    twitter_oauth_secret: 'asd'
+    
+u4:
+    email: 'jdoe2@example.com'
+    password_hash: 'abcd'
+    first_name: 'Joe'
+    last_name: 'Smith'
+    twitter_consumer_key: 'asd'
+    twitter_consumer_secret: 'asd'
+    twitter_oauth_token: 'asd'
+    twitter_oauth_secret: 'asd'
+    
+u5:
+    email: 'jdoe3@example.com'
+    password_hash: 'abcd'
+    password_salt: 'xyz'
+    last_name: 'Smith'
+    twitter_consumer_key: 'asd'
+    twitter_consumer_secret: 'asd'
+    twitter_oauth_token: 'asd'
+    twitter_oauth_secret: 'asd'
+    
+u6:
+    email: 'jdoe4@example.com'
+    password_hash: 'abcd'
+    password_salt: 'xyz'
+    first_name: 'Joe'
+    twitter_consumer_key: 'asd'
+    twitter_consumer_secret: 'asd'
+    twitter_oauth_token: 'asd'
+    twitter_oauth_secret: 'asd'
+    
+u7:
+    email: 'jdoe5@example.com'
+    password_hash: 'abcd'
+    password_salt: 'xyz'
+    first_name: 'Joe'
+    last_name: 'Smith'
+    twitter_consumer_secret: 'asd'
+    twitter_oauth_token: 'asd'
+    twitter_oauth_secret: 'asd'
+    
+u8:
+    email: 'jdoe6@example.com'
+    password_hash: 'abcd'
+    password_salt: 'xyz'
+    first_name: 'Joe'
+    last_name: 'Smith'
+    twitter_consumer_key: 'asd'
+    twitter_oauth_token: 'asd'
+    twitter_oauth_secret: 'asd'
+    
+u9:
+    email: 'jdoe7@example.com'
+    password_hash: 'abcd'
+    password_salt: 'xyz'
+    first_name: 'Joe'
+    last_name: 'Smith'
+    twitter_consumer_key: 'asd'
+    twitter_consumer_secret: 'asd'
+    twitter_oauth_secret: 'asd'
+    
+u10:
+    email: 'jdoe8@example.com'
+    password_hash: 'abcd'
+    password_salt: 'xyz'
+    first_name: 'Joe'
+    last_name: 'Smith'
+    twitter_consumer_key: 'asd'
+    twitter_consumer_secret: 'asd'
+    twitter_oauth_token: 'asd'
+    
+u12:
+    email: '@example.com'
+    password_hash: 'abcd'
+    password_salt: 'xyz'
+    first_name: 'Joe'
+    last_name: 'Smith'
+    twitter_consumer_key: 'asd'
+    twitter_consumer_secret: 'asd'
+    twitter_oauth_token: 'asd'
+    twitter_oauth_secret: 'asd'
+    
+u13:
+    email: 'jdoeexample.com'
+    password_hash: 'abcd'
+    password_salt: 'xyz'
+    first_name: 'Joe'
+    last_name: 'Smith'
+    twitter_consumer_key: 'asd'
+    twitter_consumer_secret: 'asd'
+    twitter_oauth_token: 'asd'
+    twitter_oauth_secret: 'asd'
+    
+u14:
+    email: 'jdoe@.com'
+    password_hash: 'abcd'
+    password_salt: 'xyz'
+    first_name: 'Joe'
+    last_name: 'Smith'
+    twitter_consumer_key: 'asd'
+    twitter_consumer_secret: 'asd'
+    twitter_oauth_token: 'asd'
+    twitter_oauth_secret: 'asd'
+    
+u15:
+    email: 'jdoe@examplecom'
+    password_hash: 'abcd'
+    password_salt: 'xyz'
+    first_name: 'Joe'
+    last_name: 'Smith'
+    twitter_consumer_key: 'asd'
+    twitter_consumer_secret: 'asd'
+    twitter_oauth_token: 'asd'
+    twitter_oauth_secret: 'asd'
+    
+u16:
+    email: 'jdoe@example.'
+    password_hash: 'abcd'
+    password_salt: 'xyz'
+    first_name: 'Joe'
+    last_name: 'Smith'
+    twitter_consumer_key: 'asd'
+    twitter_consumer_secret: 'asd'
+    twitter_oauth_token: 'asd'
+    twitter_oauth_secret: 'asd'

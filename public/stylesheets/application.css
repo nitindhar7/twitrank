@@ -144,7 +144,7 @@ body {
 	cursor: pointer;
 }
 #query_main_body .query_main_row .unfinished {
-	background: #C00;
+	background: #FBB;
 }
 #query_main_body .query_main_row .finished {
 	background: #99FF99;
