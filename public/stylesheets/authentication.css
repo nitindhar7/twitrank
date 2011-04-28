@@ -12,7 +12,7 @@ body {
 
 #logo {
 	margin: auto;
-	margin-top: 12%;
+	margin-top: 10%;
 	width: 1100px;
 	height: 150px;
 	text-shadow: 0 4px 3px #333;
@@ -213,4 +213,42 @@ body {
 	line-height: 18px;
 	font-size: 12px;
 	cursor: pointer;
+}
+
+#welcome {
+	margin: auto;
+	margin-top: 10px;
+	padding: 10px;
+	width: 580px;
+	background: #000;
+	opacity: 0.8;
+	clear: both;
+	border: 1px solid #000;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 0 300px #000;
+	-webkit-box-shadow: 0 0 300px #000; 
+}
+
+#topics {
+	width: 580px;
+	height: 30px;
+	clear: both;
+}
+
+#topics .topic {
+	position: relative;
+	margin-right: 10px;
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	color: #CCC;
+	background: #111;
+	cursor: pointer;
+	float: left;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
 }

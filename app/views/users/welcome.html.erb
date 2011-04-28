@@ -19,6 +19,12 @@
 		<%= link_to_remote "Create Account", :url => new_user_path, :method => :get, :html => { :class => "button" } %>
 	</div>
 </div>
+<div id="welcome">
+	<div id="topics">
+		<div class="topic">What It Is</div>
+		<div class="topic">How To Use It</div>
+	</div>
+</div>
 <div id="errors">
 	<%= flash[:error] %>
 </div>

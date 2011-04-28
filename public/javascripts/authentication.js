@@ -22,6 +22,17 @@ $(document).ready(function() {
 				$(this).animate({ backgroundColor: '#111' }, 500, function() {});
 			}
 	});
+	
+	$("#topics .topic").live({
+		mouseenter:
+			function() {
+				$(this).animate({ backgroundColor: '#333' }, 500, function() {});
+			},
+		mouseleave:
+			function() {
+				$(this).animate({ backgroundColor: '#111' }, 500, function() {});
+			}
+	});
 });
 
 function expandSignup()
