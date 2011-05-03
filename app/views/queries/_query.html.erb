@@ -17,5 +17,6 @@
 <div id="query_controls_<%= @query.id %>" class="query_controls_row">
 	<%= link_to_remote "Get Tweets", :url => fetch_tweet_path( @query.id ), :method => :get, :update => "query_tweets_count_#{@query.id}", :html => { :class => "button get_tweets" }, :complete => "hideElement('query_controls_#{@query.id}')", :loading => "showElement('query_controls_#{@query.id} .spinner')" %>
 	<%= link_to_remote "Finish Query", :url => finish_query_path( @query.id ), :method => :get, :update => "query_status_#{@query.id}", :html => { :class => "button finish" }, :complete => "hideElement('query_controls_#{@query.id}')", :loading => "showElement('query_controls_#{@query.id} .spinner')" %>
+	<%= link_to_remote "Delete Query", :url => @query, :method => "delete", :confirm => "Delete Query?", :html => { :class => "button delete" }, :complete => "hideElement('query_#{@query.id}'); hideElement('query_controls_#{@query.id}');", :loading => "showElement('query_controls_#{@query.id} .spinner')" %>
 	<div class="spinner"></div>
 </div>

@@ -36,6 +36,10 @@ class QueriesController < ApplicationController
     render :partial => "finish"
   end
   
+  def destroy
+    
+  end
+  
   private
   
   def load_queries
