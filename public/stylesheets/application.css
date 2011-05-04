@@ -367,29 +367,28 @@ body {
 	cursor: pointer;
 }
 
+#messages {
+	position: fixed;
+	width: 100%;
+	background: #000;
+	z-index: 1000;
+	opacity: .75;
+	-moz-box-shadow: 0 2px 3px #999;
+	-webkit-box-shadow: 0 2px 3px #999;
+}
+
+#messages:hover {
+	opacity: .85;
+}
+
 #error, #notice {
 	margin: auto;
-	margin-bottom: 10px;
 	width: 1100px;
 	line-height: 40px;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: bold;
 	text-align: center;
 	cursor: pointer;
 	clear: both;
-}
-
-#notice {
-	background: #CCFFCC;
-	color: #339966;
-}
-
-#error {
-	background: #FFE6E6;
-	color: #CC0000;
-}
-
-#error:hover , #notice:hover  {
-	-moz-box-shadow: 0 0 15px #999;
-	-webkit-box-shadow: 0 0 15px #999;
+	color: #FFF;
 }

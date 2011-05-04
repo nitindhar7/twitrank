@@ -6,6 +6,7 @@
 	<%= javascript_include_tag "jquery", "jqueryui", "jquery.autocomplete", "jquery.tooltip", "jrails", "application", "account" %>
 </head>
 <body>
+	<%= render :partial => "shared/messages" %>
 	<%= render :partial => "shared/nav" %>
 	<%= yield %>
 	<%= render :partial => "shared/ga" %>

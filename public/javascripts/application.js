@@ -16,7 +16,7 @@ $(document).ready(function() {
         max: 11,
     })
 	
-	$("#notice").live('click', function() {
+	$("#messages").live('click', function() {
 		$("#notice").text('');
 	});
 });
@@ -32,22 +32,22 @@ function toggleQueryControls(dropdown, query_controls_id)
 {
 	var display = $('#' + query_controls_id).css('display');
 	
-	if( display == 'none')
+	if (display == 'none')
 		$('#' + dropdown).text('▲');
 	else
 		$('#' + dropdown).text('▼');
-	
-	$('#' + query_controls_id).slideToggle('fast');
+		
+	$( '#' + query_controls_id ).slideToggle('fast');
 }
 
 function hideElement(selector)
 {
-	$('#' + selector).slideToggle('fast');
+	$('#' + selector).slideUp( 'fast' );
 }
 
 function showElement(selector)
 {
-	$('#' + selector).slideToggle('fast');
+	$('#' + selector).slideDown( 'fast' );
 }
 
 function addCustomClass(selector, customClass)

@@ -1,12 +1,5 @@
 <%= render :partial => "shared/searchbar" %>
 
-<div id="notice">
-	<%= flash[:notice] %>
-</div>
-<div id="error">
-	<%= flash[:error] %>
-</div>
-
 <div id="queries">
 	<div id="query_main">
 		<h1 id="query_main_title">Event Queries (<%= @queries.length %>)<div id="new_query_button" onclick="toggleNewQueryForm()">Add an Event +</div></h1>

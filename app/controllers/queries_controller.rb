@@ -33,11 +33,15 @@ class QueriesController < ApplicationController
     @query = Query.find( params[:id] )
     @query.status = 1
     @query.save
+    Tweet.update_all( "status = 1", "query_id = #{@query.id}" )
+    flash[:notice] = "Query Finished"
     render :partial => "finish"
   end
   
   def destroy
-    
+    Query.delete( params[:id] )
+    flash[:notice] = "Query Deleted"
+    render :nothing => true
   end
   
   private
